@@ -28,7 +28,7 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('frontend/assets/css/main.css') }}" rel="stylesheet" />
-    @stack('css-link')
+    @yield('css-link')
 </head>
 
 <body class="index-page">
@@ -64,7 +64,7 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-    @stack('js-link')
+    @yield('js-link')
 </body>
 
 </html>
