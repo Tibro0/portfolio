@@ -24,6 +24,8 @@
     {{-- <link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
     {{-- <link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" /> --}}
+    {{-- toastr Css Link --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <title>@yield('page-title')</title>
     @yield('css-link')
 </head>
@@ -62,6 +64,21 @@
     <script src="{{ asset('admin/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
     <!--app JS-->
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
+    {{-- toastr Js Link --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        // Display toast messages from session with nullable titles
+        @if (Session::has('toast'))
+            @php
+                $toast = Session::get('toast');
+            @endphp
+            @if (!empty($toast['title']))
+                toastr.{{ $toast['type'] }}('{{ $toast['message'] }}', '{{ $toast['title'] }}');
+            @else
+                toastr.{{ $toast['type'] }}('{{ $toast['message'] }}');
+            @endif
+        @endif
+    </script>
     @yield('js-link')
 </body>
 

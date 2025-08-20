@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -20,6 +21,14 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Profile all Route
+    Route::controller(AdminProfileController::class)->group(function () {
+        Route::get('profile', 'index')->name('profile.index');
+        Route::post('profile/update', 'profileUpdate')->name('profile.Update');
+        Route::post('profile/password/update', 'updatePassword')->name('profile.password.Update');
+    });
+
 });
 
 require __DIR__ . '/auth.php';
