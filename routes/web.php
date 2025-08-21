@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -28,6 +29,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
         Route::post('profile/update', 'profileUpdate')->name('profile.Update');
         Route::post('profile/password/update', 'updatePassword')->name('profile.password.Update');
     });
+
+    // Animation Text
+    Route::resource('animation-text', AnimationTextController::class);
 
 });
 
