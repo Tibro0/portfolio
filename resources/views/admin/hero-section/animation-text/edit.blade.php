@@ -13,7 +13,7 @@
                     @method('PUT')
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="d-flex align-items-center mb-3">Create Animation Text</h5>
+                            <h5 class="d-flex align-items-center mb-3">Update Animation Text</h5>
                             <div class="row g-3">
                                 <div class="col-lg-12">
                                     <label class="form-label">Title <span class="text-danger">*</span></label>

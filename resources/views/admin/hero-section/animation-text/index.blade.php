@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('page-title')
-    {{ config('app.name') }} | Animation Text
+    {{ config('app.name') }} | All Animation Text
 @endsection
 
 @section('css-link')
