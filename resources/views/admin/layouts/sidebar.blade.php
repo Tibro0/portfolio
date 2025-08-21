@@ -30,6 +30,8 @@
                 </li>
                 <li> <a href="{{ route('admin.tag.index') }}"><i class="bx bx-right-arrow-alt"></i>Tag</a>
                 </li>
+                <li> <a href="{{ route('admin.social-icon.index') }}"><i class="bx bx-right-arrow-alt"></i>Social Icon</a>
+                </li>
             </ul>
         </li>
 

@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AnimationTextSeeder::class,
             TagSeeder::class,
+            SocialIconSeeder::class,
         ]);
     }
 }

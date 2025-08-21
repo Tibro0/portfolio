@@ -38,10 +38,9 @@
                     </div>
 
                     <div class="social-links" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                        <a href="#"><i class="bi bi-github"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        @foreach ($socialIcons as $socialIcon)
+                            <a target="_blank" href="{{ $socialIcon->url }}"><i class="{{ $socialIcon->icon }}"></i></a>
+                        @endforeach
                     </div>
                 </div>
             </div>
