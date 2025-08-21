@@ -14,7 +14,7 @@ class AnimationTextController extends Controller
     public function index()
     {
         $animationTexts = AnimationText::all();
-        return view('admin.animation-text.index', compact('animationTexts'));
+        return view('admin.hero-section.animation-text.index', compact('animationTexts'));
     }
 
     /**
@@ -22,7 +22,7 @@ class AnimationTextController extends Controller
      */
     public function create()
     {
-        return view('admin.animation-text.create');
+        return view('admin.hero-section.animation-text.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class AnimationTextController extends Controller
     public function edit(string $id)
     {
         $animationText = AnimationText::findOrFail($id);
-        return view('admin.animation-text.edit', compact('animationText'));
+        return view('admin.hero-section.animation-text.edit', compact('animationText'));
     }
 
     /**

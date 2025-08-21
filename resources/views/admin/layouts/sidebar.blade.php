@@ -28,6 +28,8 @@
             <ul>
                 <li> <a href="{{ route('admin.animation-text.index') }}"><i class="bx bx-right-arrow-alt"></i>Animation Text</a>
                 </li>
+                <li> <a href="{{ route('admin.tag.index') }}"><i class="bx bx-right-arrow-alt"></i>Tag</a>
+                </li>
             </ul>
         </li>
 
