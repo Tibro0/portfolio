@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnimationTextController;
+use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SocialIconController;
 use App\Http\Controllers\Admin\TagController;
@@ -36,6 +37,8 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('tag', TagController::class);
     // Social Icon
     Route::resource('social-icon', SocialIconController::class);
+    // Counter
+    Route::resource('counter', CounterController::class);
 });
 
 require __DIR__ . '/auth.php';

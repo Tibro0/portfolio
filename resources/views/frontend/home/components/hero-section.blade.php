@@ -15,21 +15,30 @@
                     </p>
 
                     <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-item">
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
-                                data-purecounter-duration="2">0</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5"
-                                data-purecounter-duration="2">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98"
-                                data-purecounter-duration="2">0</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
+                        @foreach ($counters as $counter)
+                            @if ($loop->index == 0)
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0"
+                                        data-purecounter-end="{{ $counter->number }}"
+                                        data-purecounter-duration="2">0</span>
+                                    <span class="stat-label">{{ $counter->title }}</span>
+                                </div>
+                            @elseif ($loop->index == 1)
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0"
+                                        data-purecounter-end="{{ $counter->number }}"
+                                        data-purecounter-duration="2">0</span>
+                                    <span class="stat-label">{{ $counter->title }}</< /span>
+                                </div>
+                            @elseif ($loop->index == 2)
+                                <div class="stat-item">
+                                    <span class="purecounter" data-purecounter-start="0"
+                                        data-purecounter-end="{{ $counter->number }}"
+                                        data-purecounter-duration="2">0</span>
+                                    <span class="stat-label">{{ $counter->title }}</span>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
 
                     <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">

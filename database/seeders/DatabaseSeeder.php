@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             AnimationTextSeeder::class,
             TagSeeder::class,
             SocialIconSeeder::class,
+            CounterSeeder::class,
         ]);
     }
 }

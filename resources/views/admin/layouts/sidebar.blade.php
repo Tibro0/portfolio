@@ -32,6 +32,8 @@
                 </li>
                 <li> <a href="{{ route('admin.social-icon.index') }}"><i class="bx bx-right-arrow-alt"></i>Social Icon</a>
                 </li>
+                <li> <a href="{{ route('admin.counter.index') }}"><i class="bx bx-right-arrow-alt"></i>Counter</a>
+                </li>
             </ul>
         </li>
 
