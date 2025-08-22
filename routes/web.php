@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\CounterController;
@@ -39,6 +40,12 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('social-icon', SocialIconController::class);
     // Counter
     Route::resource('counter', CounterController::class);
+
+    // About All Route
+    Route::controller(AboutController::class)->group(function () {
+        Route::get('about', 'index')->name('about.index');
+        Route::post('about/update', 'aboutUpdate')->name('about.update');
+    });
 });
 
 require __DIR__ . '/auth.php';

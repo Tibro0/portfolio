@@ -21,11 +21,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            UserSeeder::class,
-            AnimationTextSeeder::class,
-            TagSeeder::class,
-            SocialIconSeeder::class,
-            CounterSeeder::class,
+            // UserSeeder::class,
+            // AnimationTextSeeder::class,
+            // TagSeeder::class,
+            // SocialIconSeeder::class,
+            // CounterSeeder::class,
+            AboutSeeder::class,
         ]);
     }
 }

@@ -9,9 +9,7 @@
                             data-typed-items="@foreach ($animationTexts as $animationText) {{ $animationText->title }}@if (!$loop->last), @endif @endforeach"></span>
                     </h1>
                     <p class="lead">
-                        I create digital experiences that inspire and engage. With a
-                        passion for clean design and innovative solutions, I transform
-                        ideas into beautiful, functional realities.
+                        Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.
                     </p>
 
                     <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
