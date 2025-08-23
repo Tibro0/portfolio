@@ -13,7 +13,7 @@ class BackendSkillController extends Controller
      */
     public function index()
     {
-        $skillCardTitleOne = SkillCardTitle::where('id', 1)->first();
+        $skillCardTitleOne = SkillCardTitle::where('id', 2)->first();
         return view('admin.skill.backend.index', compact('skillCardTitleOne'));
     }
 
