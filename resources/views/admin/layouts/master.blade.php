@@ -45,6 +45,7 @@
             @yield('content')
         </div>
         <!--end page wrapper -->
+        @yield('model')
         <!--start overlay-->
         <div class="overlay toggle-icon"></div>
         <!--end overlay-->

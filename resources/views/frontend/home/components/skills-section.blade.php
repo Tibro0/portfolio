@@ -7,8 +7,8 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="bi bi-code-slash"></i>
-                                    <h3>Frontend Development</h3>
+                                    <i class="{{$skillCardTitleOne->icon}}"></i>
+                                    <h3>{{$skillCardTitleOne->title}}</h3>
                                 </div>
                                 <div class="skills-animation">
                                     <div class="skill-item">
@@ -51,8 +51,8 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="bi bi-server"></i>
-                                    <h3>Backend Development</h3>
+                                    <i class="{{$skillCardTitleTwo->icon}}"></i>
+                                    <h3>{{$skillCardTitleTwo->title}}</h3>
                                 </div>
                                 <div class="skills-animation">
                                     <div class="skill-item">
@@ -95,8 +95,8 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="bi bi-palette"></i>
-                                    <h3>Design &amp; Tools</h3>
+                                    <i class="{{ $skillCardTitleThree->icon }}"></i>
+                                    <h3>{{ $skillCardTitleThree->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
                                     <div class="skill-item">
@@ -139,8 +139,8 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="bi bi-cloud"></i>
-                                    <h3>Cloud &amp; DevOps</h3>
+                                    <i class="{{ $skillCardTitleFour->icon }}"></i>
+                                    <h3>{{ $skillCardTitleFour->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
                                     <div class="skill-item">

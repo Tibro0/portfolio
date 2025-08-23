@@ -19,7 +19,7 @@
                                     <label class="form-label">Icon <span class="text-danger">*</span> (<a href="https://icons.getbootstrap.com/" target="_blank">https://icons.getbootstrap.com/</a>)</label>
                                     <input type="text" name="icon"
                                         class="form-control @error('icon') is-invalid @enderror"
-                                        value="{{ old('icon') ?? $socialIcon->icon }}" placeholder="Icon">
+                                        value="{{ old('title') ?? $socialIcon->icon }}" placeholder="Icon">
                                     @error('icon')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
