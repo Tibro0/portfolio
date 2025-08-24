@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             FrontendSkillSeeder::class,
             BackendSkillSeeder::class,
             DesignSkillSeeder::class,
+            CloudSkillSeeder::class,
         ]);
     }
 }

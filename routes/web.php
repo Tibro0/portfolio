@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\BackendSkillController;
+use App\Http\Controllers\Admin\CloudSkillController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DesignSkillController;
@@ -61,6 +62,10 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     // Design Skill
     Route::put('/design-skill-card-title-update/{id}', [DesignSkillController::class, 'designSkillCardTitleUpdate'])->name('design-skill-card-title-update');
     Route::resource('design-skill', DesignSkillController::class);
+
+    // Cloud Skill
+    Route::put('/cloud-skill-card-title-update/{id}', [CloudSkillController::class, 'cloudSkillCardTitleUpdate'])->name('cloud-skill-card-title-update');
+    Route::resource('cloud-skill', CloudSkillController::class);
 });
 
 require __DIR__ . '/auth.php';

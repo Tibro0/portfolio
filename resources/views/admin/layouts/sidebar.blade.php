@@ -58,6 +58,8 @@
                 </li>
                 <li> <a href="{{ route('admin.design-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Design</a>
                 </li>
+                <li> <a href="{{ route('admin.cloud-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Cloud</a>
+                </li>
             </ul>
         </li>
 
