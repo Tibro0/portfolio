@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             CounterSeeder::class,
             AboutSeeder::class,
             SkillCardTitleSeeder::class,
+            FrontendSkillSeeder::class,
+            BackendSkillSeeder::class,
         ]);
     }
 }

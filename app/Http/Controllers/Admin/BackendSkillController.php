@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\BackendSkill;
 use App\Models\SkillCardTitle;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class BackendSkillController extends Controller
      */
     public function index()
     {
+        $backendSkills = BackendSkill::all();
         $skillCardTitleOne = SkillCardTitle::where('id', 2)->first();
-        return view('admin.skill.backend.index', compact('skillCardTitleOne'));
+        return view('admin.skill.backend.index', compact('backendSkills','skillCardTitleOne'));
     }
 
     /**
@@ -22,7 +24,7 @@ class BackendSkillController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.skill.backend.create');
     }
 
     /**
@@ -30,7 +32,20 @@ class BackendSkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>['required', 'max:255', 'unique:backend_skills,title'],
+            'percentage'=>['required', 'integer', 'max:255'],
+        ]);
+
+        $backendSkill = new BackendSkill();
+        $backendSkill->title = $request->title;
+        $backendSkill->percentage = $request->percentage;
+        $backendSkill->save();
+
+        return redirect()->route('admin.backend-skill.index')->with('toast', [
+            'type' => 'success',
+            'message' => 'Created Successfully!'
+        ]);
     }
 
     /**
@@ -46,7 +61,8 @@ class BackendSkillController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $backendSkill = BackendSkill::findOrFail($id);
+        return view('admin.skill.backend.edit', compact('backendSkill'));
     }
 
     /**
@@ -54,7 +70,20 @@ class BackendSkillController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title'=>['required', 'max:255', 'unique:backend_skills,title,'.$id],
+            'percentage'=>['required', 'integer', 'max:255'],
+        ]);
+
+        $backendSkill = BackendSkill::findOrFail($id);
+        $backendSkill->title = $request->title;
+        $backendSkill->percentage = $request->percentage;
+        $backendSkill->save();
+
+        return redirect()->route('admin.backend-skill.index')->with('toast', [
+            'type' => 'success',
+            'message' => 'Updated Successfully!'
+        ]);
     }
 
     /**
@@ -62,7 +91,9 @@ class BackendSkillController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        BackendSkill::findOrFail($id)->delete();
+
+        return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 
     public function backendSkillCardTitleUpdate(Request $request, string $id)

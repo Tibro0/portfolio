@@ -17,11 +17,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                    <div class="breadcrumb-title border-0 pe-3">All Social Icon</div>
+                    <div class="breadcrumb-title border-0 pe-3">All Backend Skill</div>
                     <div class="ms-auto">
                         <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Card Title Update</button>
-                        <a href="{{ route('admin.social-icon.create') }}" class="btn btn-primary px-5">Create New</a>
+                        <a href="{{ route('admin.backend-skill.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -29,21 +29,21 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Icon</th>
-                                <th>Url</th>
+                                <th>Title</th>
+                                <th>Percentage</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @forelse ($socialIcons as $item)
+                            @forelse ($backendSkills as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><i class="{{ $item->icon }} h1"></i></td>
-                                    <td>{{ $item->url }}</td>
+                                    <td>{{ $item->title }}</td>
+                                    <td>{{ $item->percentage }}</td>
                                     <td>
-                                        <a href="{{ route('admin.social-icon.edit', $item->id) }}"
+                                        <a href="{{ route('admin.backend-skill.edit', $item->id) }}"
                                             class="btn btn-primary"><i class="lni lni-pencil-alt"></i></a>
-                                        <a href="{{ route('admin.social-icon.destroy', $item->id) }}" id="delete"
+                                        <a href="{{ route('admin.backend-skill.destroy', $item->id) }}" id="delete"
                                             class="btn btn-danger"><i class="lni lni-trash"></i></a>
                                     </td>
                                 </tr>
@@ -55,7 +55,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforelse --}}
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
