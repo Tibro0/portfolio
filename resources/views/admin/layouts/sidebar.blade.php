@@ -56,6 +56,8 @@
                 </li>
                 <li> <a href="{{ route('admin.backend-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Backend</a>
                 </li>
+                <li> <a href="{{ route('admin.design-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Design</a>
+                </li>
             </ul>
         </li>
 

@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             SkillCardTitleSeeder::class,
             FrontendSkillSeeder::class,
             BackendSkillSeeder::class,
+            DesignSkillSeeder::class,
         ]);
     }
 }
