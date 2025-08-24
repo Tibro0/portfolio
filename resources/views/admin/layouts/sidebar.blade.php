@@ -52,6 +52,8 @@
                 <div class="menu-title">Skill Section</div>
             </a>
             <ul>
+                <li> <a href="{{ route('admin.frontend-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Frontend</a>
+                </li>
                 <li> <a href="{{ route('admin.backend-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Backend</a>
                 </li>
             </ul>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\BackendSkillController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FrontendSkillController;
 use App\Http\Controllers\Admin\SocialIconController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -47,6 +48,10 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
         Route::get('about', 'index')->name('about.index');
         Route::post('about/update', 'aboutUpdate')->name('about.update');
     });
+
+    // Frontend Skill
+    Route::put('/frontend-skill-card-title-update/{id}', [FrontendSkillController::class, 'frontendSkillCardTitleUpdate'])->name('frontend-skill-card-title-update');
+    Route::resource('frontend-skill', FrontendSkillController::class);
 
     // Backend Skill
     Route::put('/backend-skill-card-title-one-update/{id}', [BackendSkillController::class, 'backendSkillCardTitleUpdate'])->name('backend-skill-card-title-one-update');

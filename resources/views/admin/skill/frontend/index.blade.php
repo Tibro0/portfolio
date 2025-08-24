@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('page-title')
-    {{ config('app.name') }} | All Backend Skills
+    {{ config('app.name') }} | All Frontend Skills
 @endsection
 
 @section('css-link')
@@ -74,7 +74,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('admin.backend-skill-card-title-one-update', $skillCardTitleOne->id) }}" method="POST">
+                    <form action="{{ route('admin.frontend-skill-card-title-update', $skillCardTitleOne->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                     <div class="row g-3">
