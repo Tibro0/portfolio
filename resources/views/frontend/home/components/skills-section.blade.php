@@ -7,42 +7,23 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="{{$skillCardTitleOne->icon}}"></i>
-                                    <h3>{{$skillCardTitleOne->title}}</h3>
+                                    <i class="{{ $skillCardTitleOne->icon }}"></i>
+                                    <h3>{{ $skillCardTitleOne->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">HTML/CSS</span>
-                                            <span class="skill-percentage">95%</span>
+                                    @foreach ($frontendSkills as $frontendSkill)
+                                        <div class="skill-item">
+                                            <div class="skill-info">
+                                                <span class="skill-name">{{ $frontendSkill->title }}</span>
+                                                <span class="skill-percentage">{{ $frontendSkill->percentage }}%</span>
+                                            </div>
+                                            <div class="skill-bar progress">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="{{ $frontendSkill->percentage }}" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
                                         </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="95"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">JavaScript</span>
-                                            <span class="skill-percentage">88%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="88"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Vue.js</span>
-                                            <span class="skill-percentage">82%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="82"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!-- End Frontend Card -->
@@ -51,42 +32,23 @@
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
                             <div class="skill-card">
                                 <div class="skill-header">
-                                    <i class="{{$skillCardTitleTwo->icon}}"></i>
-                                    <h3>{{$skillCardTitleTwo->title}}</h3>
+                                    <i class="{{ $skillCardTitleTwo->icon }}"></i>
+                                    <h3>{{ $skillCardTitleTwo->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">PHP</span>
-                                            <span class="skill-percentage">78%</span>
+                                    @foreach ($backendSkills as $backendSkill)
+                                        <div class="skill-item">
+                                            <div class="skill-info">
+                                                <span class="skill-name">{{ $backendSkill->title }}</span>
+                                                <span class="skill-percentage">{{ $backendSkill->percentage }}%</span>
+                                            </div>
+                                            <div class="skill-bar progress">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="{{ $backendSkill->percentage }}" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
                                         </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="78"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Laravel</span>
-                                            <span class="skill-percentage">75%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">MySQL</span>
-                                            <span class="skill-percentage">72%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="72"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!-- End Backend Card -->

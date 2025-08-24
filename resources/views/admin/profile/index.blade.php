@@ -8,7 +8,7 @@
     <div class="page-content">
         <div class="row">
             <div class="col-lg-12">
-                <form action="{{ route('admin.profile.Update') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.profile.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card">
                         <div class="card-body">
@@ -56,7 +56,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <form action="{{ route('admin.profile.password.Update') }}" method="POST">
+                <form action="{{ route('admin.profile.password.update') }}" method="POST">
                     @csrf
                     <div class="card">
                         <div class="card-body">

@@ -31,8 +31,8 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     // Profile all Route
     Route::controller(AdminProfileController::class)->group(function () {
         Route::get('profile', 'index')->name('profile.index');
-        Route::post('profile/update', 'profileUpdate')->name('profile.Update');
-        Route::post('profile/password/update', 'updatePassword')->name('profile.password.Update');
+        Route::post('profile/update', 'profileUpdate')->name('profile.update');
+        Route::post('profile/password/update', 'updatePassword')->name('profile.password.update');
     });
     // Animation Text
     Route::resource('animation-text', AnimationTextController::class);

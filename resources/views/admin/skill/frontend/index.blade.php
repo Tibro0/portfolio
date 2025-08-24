@@ -29,8 +29,8 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Icon</th>
-                                <th>Url</th>
+                                <th>Title</th>
+                                <th>Percentage</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

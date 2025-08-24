@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\AnimationText;
+use App\Models\BackendSkill;
 use App\Models\Counter;
+use App\Models\FrontendSkill;
 use App\Models\SkillCardTitle;
 use App\Models\SocialIcon;
 use App\Models\Tag;
@@ -24,6 +26,8 @@ class FrontendController extends Controller
         $skillCardTitleTwo = SkillCardTitle::where('id', 2)->first();
         $skillCardTitleThree = SkillCardTitle::where('id', 3)->first();
         $skillCardTitleFour = SkillCardTitle::where('id', 4)->first();
-        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour'));
+        $frontendSkills = FrontendSkill::all();
+        $backendSkills = BackendSkill::all();
+        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills'));
     }
 }
