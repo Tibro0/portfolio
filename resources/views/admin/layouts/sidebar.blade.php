@@ -60,6 +60,8 @@
                 </li>
                 <li> <a href="{{ route('admin.cloud-skill.index') }}"><i class="bx bx-right-arrow-alt"></i>Cloud</a>
                 </li>
+                <li> <a href="{{ route('admin.certification.index') }}"><i class="bx bx-right-arrow-alt"></i>Certification</a>
+                </li>
             </ul>
         </li>
 

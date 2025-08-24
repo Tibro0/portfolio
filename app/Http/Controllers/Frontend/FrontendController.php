@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\AnimationText;
 use App\Models\BackendSkill;
+use App\Models\Certification;
 use App\Models\CloudSkill;
 use App\Models\Counter;
 use App\Models\DesignSkill;
@@ -32,6 +33,7 @@ class FrontendController extends Controller
         $backendSkills = BackendSkill::all();
         $designSkills = DesignSkill::all();
         $cloudSkills = CloudSkill::all();
-        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills'));
+        $certifications = Certification::all();
+        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications'));
     }
 }

@@ -93,8 +93,9 @@
                                                 <span class="skill-percentage">{{ $cloudSkill->percentage }}%</span>
                                             </div>
                                             <div class="skill-bar progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="{{ $cloudSkill->percentage }}"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="{{ $cloudSkill->percentage }}" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     @endforeach
@@ -155,10 +156,9 @@
                     <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
                         <h4>Certifications</h4>
                         <div class="badge-list">
-                            <div class="skill-badge">AWS Certified</div>
-                            <div class="skill-badge">Laravel Expert</div>
-                            <div class="skill-badge">Vue.js Developer</div>
-                            <div class="skill-badge">UI/UX Design</div>
+                            @foreach ($certifications as $certification)
+                                <div class="skill-badge">{{ $certification->title }}</div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
