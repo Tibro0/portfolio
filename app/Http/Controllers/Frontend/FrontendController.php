@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\AnimationText;
 use App\Models\BackendSkill;
+use App\Models\CloudSkill;
 use App\Models\Counter;
+use App\Models\DesignSkill;
 use App\Models\FrontendSkill;
 use App\Models\SkillCardTitle;
 use App\Models\SocialIcon;
@@ -28,6 +30,8 @@ class FrontendController extends Controller
         $skillCardTitleFour = SkillCardTitle::where('id', 4)->first();
         $frontendSkills = FrontendSkill::all();
         $backendSkills = BackendSkill::all();
-        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills'));
+        $designSkills = DesignSkill::all();
+        $cloudSkills = CloudSkill::all();
+        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills'));
     }
 }

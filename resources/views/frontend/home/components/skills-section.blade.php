@@ -61,38 +61,19 @@
                                     <h3>{{ $skillCardTitleThree->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Figma</span>
-                                            <span class="skill-percentage">85%</span>
+                                    @foreach ($designSkills as $designSkill)
+                                        <div class="skill-item">
+                                            <div class="skill-info">
+                                                <span class="skill-name">{{ $designSkill->title }}</span>
+                                                <span class="skill-percentage">{{ $designSkill->percentage }}%</span>
+                                            </div>
+                                            <div class="skill-bar progress">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="{{ $designSkill->percentage }}" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
                                         </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="85"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Photoshop</span>
-                                            <span class="skill-percentage">70%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Illustrator</span>
-                                            <span class="skill-percentage">68%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="68"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!-- End Design Card -->
@@ -105,38 +86,18 @@
                                     <h3>{{ $skillCardTitleFour->title }}</h3>
                                 </div>
                                 <div class="skills-animation">
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">AWS</span>
-                                            <span class="skill-percentage">76%</span>
+                                    @foreach ($cloudSkills as $cloudSkill)
+                                        <div class="skill-item">
+                                            <div class="skill-info">
+                                                <span class="skill-name">{{ $cloudSkill->title }}</span>
+                                                <span class="skill-percentage">{{ $cloudSkill->percentage }}%</span>
+                                            </div>
+                                            <div class="skill-bar progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="{{ $cloudSkill->percentage }}"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
                                         </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="76"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Docker</span>
-                                            <span class="skill-percentage">73%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="73"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="skill-item">
-                                        <div class="skill-info">
-                                            <span class="skill-name">Git</span>
-                                            <span class="skill-percentage">90%</span>
-                                        </div>
-                                        <div class="skill-bar progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="90"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!-- End DevOps Card -->
