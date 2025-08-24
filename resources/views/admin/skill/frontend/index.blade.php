@@ -74,7 +74,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('admin.frontend-skill-card-title-update', $skillCardTitleOne->id) }}" method="POST">
+                    <form action="{{ route('admin.skill-card-title-update', $skillCardTitleOne->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                     <div class="row g-3">
@@ -106,7 +106,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
 

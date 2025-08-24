@@ -53,7 +53,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     });
 
     // Frontend Skill
-    Route::put('/frontend-skill-card-title-update/{id}', [FrontendSkillController::class, 'frontendSkillCardTitleUpdate'])->name('frontend-skill-card-title-update');
+    Route::put('/skill-card-title-update/{id}', [FrontendSkillController::class, 'skillCardTitleUpdate'])->name('skill-card-title-update');
     Route::resource('frontend-skill', FrontendSkillController::class);
 
     // Backend Skill

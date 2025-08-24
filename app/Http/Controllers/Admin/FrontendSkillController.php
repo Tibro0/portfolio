@@ -96,7 +96,7 @@ class FrontendSkillController extends Controller
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 
-    public function frontendSkillCardTitleUpdate(Request $request, string $id)
+    public function skillCardTitleUpdate(Request $request, string $id)
     {
         $request->validate([
             'icon'=> ['required', 'max:255'],
