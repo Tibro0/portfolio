@@ -90,7 +90,7 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <div class="experience-section">
                         <div class="section-header">
-                            <h2><i class="bi bi-briefcase"></i> Professional Journey</h2>
+                            <h2><i class="bi bi-mortarboard"></i> Academic Excellence</h2>
                             <p class="section-subtitle">
                                 Pellentesque habitant morbi tristique senectus et netus et
                                 malesuada fames ac turpis egestas vestibulum tortor quam.

@@ -32,7 +32,8 @@ class DatabaseSeeder extends Seeder
             BackendSkillSeeder::class,
             DesignSkillSeeder::class,
             CloudSkillSeeder::class,
-            CertificationSeeder::class
+            CertificationSeeder::class,
+            ProfessionalJourneySeeder::class,
         ]);
     }
 }

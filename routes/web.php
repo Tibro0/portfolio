@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DesignSkillController;
 use App\Http\Controllers\Admin\FrontendSkillController;
+use App\Http\Controllers\Admin\ProfessionalJourneyController;
 use App\Http\Controllers\Admin\SocialIconController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -70,6 +71,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Certification
     Route::resource('certification', CertificationController::class);
+
+    // Professional Journey
+    Route::resource('professional-journey', ProfessionalJourneyController::class);
 });
 
 require __DIR__ . '/auth.php';

@@ -1,0 +1,35 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\ProfessionalJourney;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProfessionalJourneySeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        ProfessionalJourney::insert([
+            [
+                'year'=> '2025 June - Present',
+                'title'=> 'SoClose Dhaka Limited',
+                'sub_title'=> 'Full Stack Web Developer (Php & Laravel)',
+                'description'=> 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'year'=> '2025 January - 2025 May',
+                'title'=> 'Udemy Online Courses - Laravel',
+                'sub_title'=> 'Web Solution US',
+                'description'=> 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+        ]);
+    }
+}

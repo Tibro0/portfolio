@@ -65,6 +65,19 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                </div>
+                <div class="menu-title">Resume Section</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('admin.professional-journey.index') }}"><i class="bx bx-right-arrow-alt"></i>Professional Journey</a>
+                </li>
+
+            </ul>
+        </li>
+
         {{-- <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-home-circle'></i>
