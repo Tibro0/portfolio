@@ -30,6 +30,22 @@ class ProfessionalJourneySeeder extends Seeder
                 'created_at'=> now(),
                 'updated_at'=> now(),
             ],
+            [
+                'year'=> '2024',
+                'title'=> 'Shikhbe Shobai',
+                'sub_title'=> 'Full Stack Web Development - PHP Laravel',
+                'description'=> "Shikhbe Shobai: Bangladesh's premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.",
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'year'=> '2023',
+                'title'=> 'Shikhbe Shobai',
+                'sub_title'=> 'Full Stack Web Development - Wordpress',
+                'description'=> "Shikhbe Shobai: Bangladesh's premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.",
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
         ]);
     }
 }

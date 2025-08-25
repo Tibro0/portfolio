@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\AcademicExcellenceController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\BackendSkillController;
@@ -74,6 +75,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Professional Journey
     Route::resource('professional-journey', ProfessionalJourneyController::class);
+
+    // Academic Excellence
+    Route::resource('academic-excellence', AcademicExcellenceController::class);
 });
 
 require __DIR__ . '/auth.php';

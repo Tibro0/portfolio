@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             CloudSkillSeeder::class,
             CertificationSeeder::class,
             ProfessionalJourneySeeder::class,
+            AcademicExcellenceSeeder::class,
         ]);
     }
 }

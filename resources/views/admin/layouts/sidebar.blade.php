@@ -74,7 +74,8 @@
             <ul>
                 <li> <a href="{{ route('admin.professional-journey.index') }}"><i class="bx bx-right-arrow-alt"></i>Professional Journey</a>
                 </li>
-
+                <li> <a href="{{ route('admin.academic-excellence.index') }}"><i class="bx bx-right-arrow-alt"></i>Academic Excellence</a>
+                </li>
             </ul>
         </li>
 
