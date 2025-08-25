@@ -14,7 +14,7 @@
             <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                 <div class="profile-image-wrapper">
                     <div class="profile-image">
-                        <img src="{{ asset('frontend/assets/img/profile/profile-square-1.webp') }}" alt="Profile"
+                        <img src="{{ asset($user->avatar) }}" alt="Profile"
                             class="img-fluid" />
                     </div>
                     <div class="signature-section">
@@ -30,7 +30,7 @@
             <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
                 <div class="about-content">
                     <div class="intro">
-                        <h2>Hi, I'm MD. Faysal Hossain Tibro</h2>
+                        <h2>Hi, I'm {{ $user->name }}</h2>
                         <p>
                             {{ $about->description }}
                         </p>

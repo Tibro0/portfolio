@@ -16,12 +16,14 @@ use App\Models\ProfessionalJourney;
 use App\Models\SkillCardTitle;
 use App\Models\SocialIcon;
 use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
     {
+        $user = User::where('id', 1)->first();
         $animationTexts = AnimationText::all();
         $tags = Tag::all();
         $socialIcons = SocialIcon::all();
@@ -38,6 +40,6 @@ class FrontendController extends Controller
         $certifications = Certification::all();
         $professionalJourneys = ProfessionalJourney::all();
         $academicExcellences = AcademicExcellence::all();
-        return view('frontend.home.index', compact('animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences'));
+        return view('frontend.home.index', compact('user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences'));
     }
 }

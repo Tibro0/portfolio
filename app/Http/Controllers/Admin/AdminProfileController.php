@@ -22,6 +22,7 @@ class AdminProfileController extends Controller
             'avatar' => ['image', 'nullable', 'mimes:png',],
             'name' => ['required', 'max:255'],
             'email' => ['required', 'max:255', 'unique:users,email,' . Auth::user()->id],
+            'short_description'=> ['required', 'max:255']
         ]);
 
         if ($request->file('avatar')) {
@@ -37,6 +38,7 @@ class AdminProfileController extends Controller
             $user->avatar = $save_url;
             $user->name = $request->name;
             $user->email = $request->email;
+            $user->short_description = $request->short_description;
             $user->save();
 
             return redirect()->back()->with('toast', [
@@ -47,6 +49,7 @@ class AdminProfileController extends Controller
             $user = Auth::user();
             $user->name = $request->name;
             $user->email = $request->email;
+            $user->short_description = $request->short_description;
             $user->save();
 
             return redirect()->back()->with('toast', [

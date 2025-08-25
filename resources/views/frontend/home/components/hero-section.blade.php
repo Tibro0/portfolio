@@ -8,9 +8,7 @@
                         <span class="typed"
                             data-typed-items="@foreach ($animationTexts as $animationText) {{ $animationText->title }}@if (!$loop->last), @endif @endforeach"></span>
                     </h1>
-                    <p class="lead">
-                        Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.
-                    </p>
+                    <p class="lead">{{$user->short_description}}</p>
 
                     <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
                         @foreach ($counters as $counter)
@@ -74,7 +72,7 @@
                             @endif
                         @endforeach
                     </div>
-                    <img src="{{ asset('frontend/assets/img/profile/profile-square-1.webp') }}" alt="Portfolio Hero"
+                    <img src="{{ asset($user->avatar) }}" alt="Portfolio Hero"
                         class="img-fluid hero-main-image" />
                     <div class="image-overlay"></div>
                 </div>
