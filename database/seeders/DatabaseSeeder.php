@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
             ProfessionalJourneySeeder::class,
             AcademicExcellenceSeeder::class,
             ServiceSeeder::class,
+            CategorySeeder::class,
         ]);
     }
 }

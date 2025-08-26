@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AcademicExcellenceController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnimationTextController;
 use App\Http\Controllers\Admin\BackendSkillController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificationController;
 use App\Http\Controllers\Admin\CloudSkillController;
 use App\Http\Controllers\Admin\CounterController;
@@ -85,6 +86,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Service
     Route::resource('service', ServiceController::class);
+
+    // Category
+    Route::resource('category', CategoryController::class);
 });
 
 require __DIR__ . '/auth.php';

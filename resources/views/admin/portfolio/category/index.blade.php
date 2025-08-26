@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('page-title')
-    {{ config('app.name') }} | All Services
+    {{ config('app.name') }} | All Categories
 @endsection
 
 @section('css-link')
@@ -17,9 +17,9 @@
         <div class="card">
             <div class="card-body">
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                    <div class="breadcrumb-title border-0 pe-3">All Services</div>
+                    <div class="breadcrumb-title border-0 pe-3">All Categories</div>
                     <div class="ms-auto">
-                        <a href="{{ route('admin.service.create') }}" class="btn btn-primary px-5">Create New</a>
+                        <a href="{{ route('admin.category.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -27,23 +27,21 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Icon</th>
-                                <th>Title</th>
-                                <th>Description</th>
+                                <th>Name</th>
+                                <th>Slug</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($services as $item)
+                            @forelse ($categories as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><i class="{{ $item->icon }} h1"></i></td>
-                                    <td>{{ $item->title }}</td>
-                                    <td>{{ $item->description }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->slug }}</td>
                                     <td>
-                                        <a href="{{ route('admin.service.edit', $item->id) }}"
+                                        <a href="{{ route('admin.category.edit', $item->id) }}"
                                             class="btn btn-primary"><i class="lni lni-pencil-alt"></i></a>
-                                        <a href="{{ route('admin.service.destroy', $item->id) }}" id="delete"
+                                        <a href="{{ route('admin.category.destroy', $item->id) }}" id="delete"
                                             class="btn btn-danger"><i class="lni lni-trash"></i></a>
                                     </td>
                                 </tr>
