@@ -79,6 +79,14 @@
             </ul>
         </li>
 
+        <li>
+            <a href="{{ route('admin.service.index') }}">
+                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                </div>
+                <div class="menu-title">Service</div>
+            </a>
+        </li>
+
         {{-- <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-home-circle'></i>

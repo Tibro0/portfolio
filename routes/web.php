@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DesignSkillController;
 use App\Http\Controllers\Admin\FrontendSkillController;
 use App\Http\Controllers\Admin\ProfessionalJourneyController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SocialIconController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -78,6 +79,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Academic Excellence
     Route::resource('academic-excellence', AcademicExcellenceController::class);
+
+    // Service
+    Route::resource('service', ServiceController::class);
 });
 
 require __DIR__ . '/auth.php';
