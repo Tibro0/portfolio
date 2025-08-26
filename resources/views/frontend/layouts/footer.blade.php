@@ -27,8 +27,8 @@
           </div>
           <div class="col-lg-4">
             <div class="footer-grad">
-              <h2>Contact Info</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nesciunt odit reiciendis voluptates explicabo placeat consectetur facilis cupiditate similique repellat quisquam temporibus, iste blanditiis, iure, suscipit quis assumenda quasi nulla.</p>
+              <h2>Subscribe Our Newsletter</h2>
+              <p>Stay ahead of the curve. Subscribe to my newsletter for exclusive insights, industry trends, and updates on my latest creative projects and professional journey.</p>
               <form class="d-flex position-relative">
                 <input
                   class="form-control me-2"

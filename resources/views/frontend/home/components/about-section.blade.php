@@ -2,10 +2,7 @@
     <!-- Section Title -->
     <div class="container section-title">
         <h2>About</h2>
-        <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-        </p>
+        <p>Tech leader driving growth through innovative solutions and transformative execution.</p>
     </div>
     <!-- End Section Title -->
 

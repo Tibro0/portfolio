@@ -2,10 +2,7 @@
         <!-- Section Title -->
         <div class="container section-title">
             <h2>Contact</h2>
-            <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                consectetur velit
-            </p>
+            <p>Results-driven innovator building high-performing teams and transformative products.</p>
         </div>
         <!-- End Section Title -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -13,10 +10,7 @@
                 <div class="col-lg-5">
                     <div class="info-box" data-aos="fade-up" data-aos-delay="200">
                         <h3>Contact Info</h3>
-                        <p>
-                            Praesent sapien massa, convallis a pellentesque nec, egestas
-                            non nisi. Vestibulum ante ipsum primis.
-                        </p>
+                        <p>Your link to innovative tech leadership and transformative growth. Let's connect.</p>
 
                         <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon-box">
@@ -56,10 +50,7 @@
                 <div class="col-lg-7">
                     <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
                         <h3>Get In Touch</h3>
-                        <p>
-                            Praesent sapien massa, convallis a pellentesque nec, egestas
-                            non nisi. Vestibulum ante ipsum primis.
-                        </p>
+                        <p>Ready to connect? Send a message and let's start a conversation.</p>
 
                         <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
                             data-aos-delay="200">

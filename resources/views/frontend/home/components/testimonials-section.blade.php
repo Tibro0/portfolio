@@ -2,10 +2,7 @@
         <!-- Section Title -->
         <div class="container section-title">
             <h2>Testimonials</h2>
-            <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                consectetur velit
-            </p>
+            <p>Praise for precision and impact—client testimonials highlight delivered excellence.</p>
         </div>
         <!-- End Section Title -->
 

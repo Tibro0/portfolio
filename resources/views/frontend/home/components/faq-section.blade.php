@@ -2,10 +2,7 @@
         <!-- Section Title -->
         <div class="container section-title">
             <h2>Frequently Asked Questions</h2>
-            <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                consectetur velit
-            </p>
+            <p>Common questions, clear answers—streamlining your experience.</p>
         </div>
         <!-- End Section Title -->
         <div class="container">
