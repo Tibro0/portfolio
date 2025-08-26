@@ -72,6 +72,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('cloud-skill', CloudSkillController::class);
 
     // Certification
+    Route::put('/professional-expertise-title-update', [CertificationController::class, 'professionalExpertiseTitleUpdate'])->name('professional-expertise-title-update');
     Route::resource('certification', CertificationController::class);
 
     // Professional Journey

@@ -15,6 +15,18 @@ class SectionTitleSeeder extends Seeder
     {
         SectionTitle::insert([
             [
+                'key'=> 'professional_expertise_title',
+                'value'=> 'Professional Expertise',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'key'=> 'professional_expertise_description',
+                'value'=> 'Strategic leader driving tech innovation & growth. Expert in scaling startups to enterprises. Transformative results through agile execution & cross-functional team leadership.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
                 'key'=> 'professional_journey_title',
                 'value'=> 'Professional Journey',
                 'created_at'=> now(),

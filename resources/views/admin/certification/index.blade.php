@@ -19,8 +19,8 @@
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                     <div class="breadcrumb-title border-0 pe-3">All Certifications</div>
                     <div class="ms-auto">
-                        {{-- <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Card Title Update</button> --}}
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Update Title</button>
                         <a href="{{ route('admin.certification.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
                 </div>
@@ -64,53 +64,43 @@
 
 @section('model')
     <!-- Modal -->
-    {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Backend Skill Card Title Update</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update Title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('admin.cloud-skill-card-title-update', $skillCardTitleOne->id) }}"
-                        method="POST">
+                    <form action="{{ route('admin.professional-expertise-title-update') }}" method="POST">
                         @csrf
                         @method('PUT')
-                        <div class="row g-3">
-                            <div class="col-lg-12">
-                                <label class="form-label">Preview</label><br>
-                                <i class="{{ $skillCardTitleOne->icon }} h1"></i>
-                            </div>
-                            <div class="col-lg-12">
-                                <label class="form-label">Icon <span class="text-danger">*</span> (<a
-                                        href="https://icons.getbootstrap.com/"
-                                        target="_blank">https://icons.getbootstrap.com/</a>)</label>
-                                <input type="text" name="icon"
-                                    class="form-control @error('icon') is-invalid @enderror"
-                                    value="{{ old('icon') ?? $skillCardTitleOne->icon }}" placeholder="Icon">
-                                @error('icon')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-12">
-                                <label class="form-label">Title <span class="text-danger">*</span></label>
-                                <input type="text" name="title"
-                                    class="form-control @error('title') is-invalid @enderror"
-                                    value="{{ old('title') ?? $skillCardTitleOne->title }}" placeholder="Title">
-                                @error('title')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-12">
-                                <button type="submit" class="btn btn-primary px-5">Save Changes</button>
-                            </div>
+                    <div class="row g-3">
+                        <div class="col-lg-12">
+                            <label class="form-label">Professional Expertise Title <span class="text-danger">*</span></label>
+                            <input type="text" name="professional_expertise_title" class="form-control @error('professional_expertise_title') is-invalid @enderror"
+                                value="{{ old('professional_expertise_title') ?? @$title['professional_expertise_title'] }}" placeholder="Professional Expertise Title">
+                            @error('professional_expertise_title')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
+                        <div class="col-lg-12">
+                            <label class="form-label">Professional Expertise Description <span class="text-danger">*</span></label>
+                            <input type="text" name="professional_expertise_description" class="form-control @error('professional_expertise_description') is-invalid @enderror"
+                                value="{{ old('professional_expertise_description') ?? @$title['professional_expertise_description'] }}" placeholder="Professional Expertise Description">
+                            @error('professional_expertise_description')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-primary px-5">Save Changes</button>
+                        </div>
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    </div> --}}
 @endsection
 
 @section('js-link')

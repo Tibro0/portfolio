@@ -14,8 +14,8 @@
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                 <div class="experience-section">
                     <div class="section-header">
-                        <h2><i class="bi bi-briefcase"></i> {{$sectionTitle['professional_journey_title']}}</h2>
-                        <p class="section-subtitle">{{$sectionTitle['professional_journey_description']}}</p>
+                        <h2><i class="bi bi-briefcase"></i> {{@$sectionTitle['professional_journey_title']}}</h2>
+                        <p class="section-subtitle">{{@$sectionTitle['professional_journey_description']}}</p>
                     </div>
 
                     <div class="experience-cards">
@@ -41,8 +41,8 @@
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                 <div class="experience-section">
                     <div class="section-header">
-                        <h2><i class="bi bi-mortarboard"></i>  {{$sectionTitle['academic_excellences_title']}}</h2>
-                        <p class="section-subtitle"> {{$sectionTitle['academic_excellences_description']}}</p>
+                        <h2><i class="bi bi-mortarboard"></i>  {{@$sectionTitle['academic_excellences_title']}}</h2>
+                        <p class="section-subtitle"> {{@$sectionTitle['academic_excellences_description']}}</p>
                     </div>
 
                     <div class="experience-cards">

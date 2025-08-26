@@ -110,12 +110,8 @@
 
             <div class="col-lg-4">
                 <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
-                    <h3>Professional Expertise</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam.
-                    </p>
+                    <h3>{{@$sectionTitle['professional_expertise_title']}}</h3>
+                    <p>{{@$sectionTitle['professional_expertise_description']}}</p>
 
                     <div class="summary-stats">
                         @foreach ($counters as $counter)

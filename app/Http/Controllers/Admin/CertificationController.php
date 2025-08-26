@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Certification;
+use App\Models\SectionTitle;
 use Illuminate\Http\Request;
 
 class CertificationController extends Controller
@@ -13,8 +14,10 @@ class CertificationController extends Controller
      */
     public function index()
     {
+        $keys = ['professional_expertise_title', 'professional_expertise_description'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $certifications = Certification::all();
-        return view('admin.certification.index', compact('certifications'));
+        return view('admin.certification.index', compact('title','certifications'));
     }
 
     /**
@@ -88,5 +91,25 @@ class CertificationController extends Controller
         Certification::findOrFail($id)->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function professionalExpertiseTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'professional_expertise_title' => ['max:255'],
+            'professional_expertise_description' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }
