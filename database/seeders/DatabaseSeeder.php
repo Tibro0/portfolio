@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UserSeeder::class,
+            SectionTitleSeeder::class,
             AnimationTextSeeder::class,
             TagSeeder::class,
             SocialIconSeeder::class,

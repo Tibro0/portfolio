@@ -13,6 +13,7 @@ use App\Models\Counter;
 use App\Models\DesignSkill;
 use App\Models\FrontendSkill;
 use App\Models\ProfessionalJourney;
+use App\Models\SectionTitle;
 use App\Models\Service;
 use App\Models\SkillCardTitle;
 use App\Models\SocialIcon;
@@ -24,6 +25,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        $sectionTitle = SectionTitle::pluck('value', 'key');
         $user = User::where('id', 1)->first();
         $animationTexts = AnimationText::all();
         $tags = Tag::all();
@@ -42,6 +44,6 @@ class FrontendController extends Controller
         $professionalJourneys = ProfessionalJourney::all();
         $academicExcellences = AcademicExcellence::all();
         $services = Service::all();
-        return view('frontend.home.index', compact('user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services'));
+        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services'));
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ProfessionalJourney;
+use App\Models\SectionTitle;
 use Illuminate\Http\Request;
 
 class ProfessionalJourneyController extends Controller
@@ -13,8 +14,10 @@ class ProfessionalJourneyController extends Controller
      */
     public function index()
     {
+        $keys = ['professional_journey_title', 'professional_journey_description'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $professionalJourneys = ProfessionalJourney::all();
-        return view('admin.resume.professional-journey.index', compact('professionalJourneys'));
+        return view('admin.resume.professional-journey.index', compact('title', 'professionalJourneys'));
     }
 
     /**
@@ -31,10 +34,10 @@ class ProfessionalJourneyController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'year'=> ['required', 'max:255'],
-            'title'=> ['required', 'max:255'],
-            'sub_title'=> ['required', 'max:255'],
-            'description'=> ['required', 'max:255'],
+            'year' => ['required', 'max:255'],
+            'title' => ['required', 'max:255'],
+            'sub_title' => ['required', 'max:255'],
+            'description' => ['required', 'max:255'],
         ]);
 
         $professionalJourney = new ProfessionalJourney();
@@ -73,10 +76,10 @@ class ProfessionalJourneyController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'year'=> ['required', 'max:255'],
-            'title'=> ['required', 'max:255'],
-            'sub_title'=> ['required', 'max:255'],
-            'description'=> ['required', 'max:255'],
+            'year' => ['required', 'max:255'],
+            'title' => ['required', 'max:255'],
+            'sub_title' => ['required', 'max:255'],
+            'description' => ['required', 'max:255'],
         ]);
 
         $professionalJourney = ProfessionalJourney::findOrFail($id);
@@ -100,5 +103,25 @@ class ProfessionalJourneyController extends Controller
         ProfessionalJourney::findOrFail($id)->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function professionalJourneyTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'professional_journey_title' => ['max:255'],
+            'professional_journey_description' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }

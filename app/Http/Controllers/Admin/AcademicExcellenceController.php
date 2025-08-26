@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AcademicExcellence;
+use App\Models\SectionTitle;
 use Illuminate\Http\Request;
 
 class AcademicExcellenceController extends Controller
@@ -13,8 +14,10 @@ class AcademicExcellenceController extends Controller
      */
     public function index()
     {
+        $keys = ['academic_excellences_title', 'academic_excellences_description'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $academicExcellences = AcademicExcellence::all();
-        return view('admin.resume.academic-excellence.index', compact('academicExcellences'));
+        return view('admin.resume.academic-excellence.index', compact('title','academicExcellences'));
     }
 
     /**
@@ -100,5 +103,25 @@ class AcademicExcellenceController extends Controller
         AcademicExcellence::findOrFail($id)->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function academicExcellencesTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'academic_excellences_title' => ['max:255'],
+            'academic_excellences_description' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }

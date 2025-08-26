@@ -75,9 +75,11 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('certification', CertificationController::class);
 
     // Professional Journey
+    Route::put('/professional-journey-title-update', [ProfessionalJourneyController::class, 'professionalJourneyTitleUpdate'])->name('professional-journey-title-update');
     Route::resource('professional-journey', ProfessionalJourneyController::class);
 
     // Academic Excellence
+    Route::put('/academic-excellences-title-update', [AcademicExcellenceController::class, 'academicExcellencesTitleUpdate'])->name('academic-excellences-title-update');
     Route::resource('academic-excellence', AcademicExcellenceController::class);
 
     // Service

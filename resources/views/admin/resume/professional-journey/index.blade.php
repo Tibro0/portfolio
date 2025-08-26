@@ -19,8 +19,8 @@
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                     <div class="breadcrumb-title border-0 pe-3">All Professional Journeys</div>
                     <div class="ms-auto">
-                        {{-- <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Card Title Update</button> --}}
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Update Title</button>
                         <a href="{{ route('admin.professional-journey.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
                 </div>
@@ -66,37 +66,33 @@
     </div>
 @endsection
 
-{{-- @section('model')
+@section('model')
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Backend Skill Card Title Update</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update Title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('admin.design-skill-card-title-update', $skillCardTitleOne->id) }}" method="POST">
+                    <form action="{{ route('admin.professional-journey-title-update') }}" method="POST">
                         @csrf
                         @method('PUT')
                     <div class="row g-3">
                         <div class="col-lg-12">
-                            <label class="form-label">Preview</label><br>
-                            <i class="{{ $skillCardTitleOne->icon }} h1"></i>
-                        </div>
-                        <div class="col-lg-12">
-                            <label class="form-label">Icon <span class="text-danger">*</span> (<a href="https://icons.getbootstrap.com/" target="_blank">https://icons.getbootstrap.com/</a>)</label>
-                            <input type="text" name="icon" class="form-control @error('icon') is-invalid @enderror"
-                                value="{{ old('icon') ?? $skillCardTitleOne->icon }}" placeholder="Icon">
-                            @error('icon')
+                            <label class="form-label">Professional Journey Title <span class="text-danger">*</span></label>
+                            <input type="text" name="professional_journey_title" class="form-control @error('professional_journey_title') is-invalid @enderror"
+                                value="{{ old('professional_journey_title') ?? @$title['professional_journey_title'] }}" placeholder="Professional Journey Title">
+                            @error('professional_journey_title')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label">Title <span class="text-danger">*</span></label>
-                            <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
-                                value="{{ old('title') ?? $skillCardTitleOne->title }}" placeholder="Title">
-                            @error('title')
+                            <label class="form-label">Professional Journey Description <span class="text-danger">*</span></label>
+                            <input type="text" name="professional_journey_description" class="form-control @error('professional_journey_description') is-invalid @enderror"
+                                value="{{ old('professional_journey_description') ?? @$title['professional_journey_description'] }}" placeholder="Professional Journey Description">
+                            @error('professional_journey_description')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -109,7 +105,7 @@
             </div>
         </div>
     </div>
-@endsection --}}
+@endsection
 
 @section('js-link')
     {{-- dataTables Js --}}
