@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DesignSkillController;
 use App\Http\Controllers\Admin\FrontendSkillController;
+use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\ProfessionalJourneyController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SocialIconController;
@@ -89,6 +90,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Category
     Route::resource('category', CategoryController::class);
+
+    // Portfolio
+    Route::resource('portfolio', PortfolioController::class);
 });
 
 require __DIR__ . '/auth.php';

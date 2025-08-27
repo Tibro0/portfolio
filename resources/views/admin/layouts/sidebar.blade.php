@@ -96,6 +96,8 @@
             <ul>
                 <li> <a href="{{ route('admin.category.index') }}"><i class="bx bx-right-arrow-alt"></i>Category</a>
                 </li>
+                <li> <a href="{{ route('admin.portfolio.index') }}"><i class="bx bx-right-arrow-alt"></i>Portfolio</a>
+                </li>
             </ul>
         </li>
 

@@ -7,6 +7,7 @@ use App\Models\About;
 use App\Models\AcademicExcellence;
 use App\Models\AnimationText;
 use App\Models\BackendSkill;
+use App\Models\Category;
 use App\Models\Certification;
 use App\Models\CloudSkill;
 use App\Models\Counter;
@@ -44,6 +45,7 @@ class FrontendController extends Controller
         $professionalJourneys = ProfessionalJourney::all();
         $academicExcellences = AcademicExcellence::all();
         $services = Service::all();
-        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services'));
+        $categories = Category::all();
+        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories'));
     }
 }
