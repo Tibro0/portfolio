@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ProfessionalJourneyController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SocialIconController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -93,6 +94,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Portfolio
     Route::resource('portfolio', PortfolioController::class);
+
+    // Testimonial
+    Route::resource('testimonial', TestimonialController::class);
 });
 
 require __DIR__ . '/auth.php';

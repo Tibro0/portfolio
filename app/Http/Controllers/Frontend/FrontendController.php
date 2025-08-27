@@ -19,6 +19,7 @@ use App\Models\Service;
 use App\Models\SkillCardTitle;
 use App\Models\SocialIcon;
 use App\Models\Tag;
+use App\Models\Testimonial;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -46,6 +47,7 @@ class FrontendController extends Controller
         $academicExcellences = AcademicExcellence::all();
         $services = Service::all();
         $categories = Category::all();
-        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories'));
+        $testimonials = Testimonial::all();
+        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories', 'testimonials'));
     }
 }
