@@ -39,7 +39,8 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             CategorySeeder::class,
             PortfolioSeeder::class,
-            TestimonialSeeder::class
+            TestimonialSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }

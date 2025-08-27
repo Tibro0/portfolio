@@ -20,7 +20,7 @@
                             <h5 class="d-flex align-items-center mb-3">Create Portfolio</h5>
                             <div class="row g-3">
                                 <div class="col-lg-12">
-                                    <label class="form-label">Thumb Image <span class="text-danger">*</span></label>
+                                    <label class="form-label">Thumb Image <span class="text-danger">*</span> (PNG)</label>
                                     <input type="file" name="thumb_image"
                                         class="form-control @error('thumb_image') is-invalid @enderror"
                                         value="{{ old('thumb_image') }}" placeholder="Thumb Image">

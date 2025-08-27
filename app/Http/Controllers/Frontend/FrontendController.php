@@ -12,6 +12,7 @@ use App\Models\Certification;
 use App\Models\CloudSkill;
 use App\Models\Counter;
 use App\Models\DesignSkill;
+use App\Models\Faq;
 use App\Models\FrontendSkill;
 use App\Models\ProfessionalJourney;
 use App\Models\SectionTitle;
@@ -48,6 +49,7 @@ class FrontendController extends Controller
         $services = Service::all();
         $categories = Category::all();
         $testimonials = Testimonial::all();
-        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories', 'testimonials'));
+        $faqs = Faq::all();
+        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories', 'testimonials', 'faqs'));
     }
 }

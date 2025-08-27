@@ -25,7 +25,7 @@
                                     <img src="{{ asset($portfolio->thumb_image) }}" width="100">
                                 </div>
                                 <div class="col-lg-12">
-                                    <label class="form-label">Thumb Image <span class="text-danger">*</span></label>
+                                    <label class="form-label">Thumb Image <span class="text-danger">*</span> (PNG)</label>
                                     <input type="file" name="thumb_image"
                                         class="form-control @error('thumb_image') is-invalid @enderror"
                                         value="{{ old('thumb_image') }}" placeholder="Thumb Image">

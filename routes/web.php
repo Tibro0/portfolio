@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\CloudSkillController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DesignSkillController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FrontendSkillController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\ProfessionalJourneyController;
@@ -97,6 +98,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Testimonial
     Route::resource('testimonial', TestimonialController::class);
+
+    // Faq
+    Route::resource('faq', FaqController::class);
 });
 
 require __DIR__ . '/auth.php';

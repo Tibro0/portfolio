@@ -109,6 +109,14 @@
             </a>
         </li>
 
+        <li>
+            <a href="{{ route('admin.faq.index') }}">
+                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                </div>
+                <div class="menu-title">Faq</div>
+            </a>
+        </li>
+
         {{-- <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-home-circle'></i>
