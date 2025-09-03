@@ -68,9 +68,7 @@ class FrontendController extends Controller
 
         Mail::to($email)->send(new ContactFormMail($request->name, $request->email, $request->subject, $request->message));
 
-        return redirect()->back()->with('toast', [
-            'type' => 'success',
-            'message' => 'Your Message Has been Sent!'
-        ]);
+        toastr()->success('Your Message Has been Sent!');
+        return redirect()->back();
     }
 }

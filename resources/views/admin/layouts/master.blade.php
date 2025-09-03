@@ -22,9 +22,7 @@
     <link href="{{ asset('admin/assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/assets/css/icons.css') }}" rel="stylesheet">
     <!-- Theme Style CSS -->
-    {{-- <link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
-    {{-- <link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" /> --}}
     {{-- toastr Css Link --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <title>@yield('page-title')</title>
