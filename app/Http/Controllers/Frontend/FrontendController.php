@@ -50,6 +50,6 @@ class FrontendController extends Controller
         $categories = Category::all();
         $testimonials = Testimonial::all();
         $faqs = Faq::all();
-        return view('frontend.home.index', compact('sectionTitle','user','animationTexts', 'tags', 'socialIcons', 'counters', 'about','skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories', 'testimonials', 'faqs'));
+        return view('frontend.home.index', compact('sectionTitle', 'user', 'animationTexts', 'tags', 'socialIcons', 'counters', 'about', 'skillCardTitleOne', 'skillCardTitleTwo', 'skillCardTitleThree', 'skillCardTitleFour', 'frontendSkills', 'backendSkills', 'designSkills', 'cloudSkills', 'certifications', 'professionalJourneys', 'academicExcellences', 'services', 'categories', 'testimonials', 'faqs'));
     }
 }

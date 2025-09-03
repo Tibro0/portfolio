@@ -1,54 +1,18 @@
 <footer id="footer" class="footer dark-background">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="footer-grad">
-              <h2>Important Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Resume</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="footer-grad">
-              <h2>Contact Info</h2>
-              <ul class="list-unstyled">
-                <li><a href="">info@example.com</a></li>
-                <li><a href="">contact@example.com</a></li>
-                <li><a href="">+1 5589 55488 55</a></li>
-                <li><a href="">+1 6678 254445 41</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="footer-grad">
-              <h2>Subscribe Our Newsletter</h2>
-              <p>Stay ahead of the curve. Subscribe to my newsletter for exclusive insights, industry trends, and updates on my latest creative projects and professional journey.</p>
-              <form class="d-flex position-relative">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Email..."
-                />
-                <button class="btn btn-primary position-absolute" type="submit">
-                  Send
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
 
-        <div class="copyright text-center">
-          <p>
-            © <span>Copyright</span>
-            <strong class="sitename">2025</strong>
-            <span>All Rights Reserved</span>
-          </p>
-        </div>
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">{{date('Y')}}</strong> <span>All Rights Reserved</span></p>
       </div>
-    </footer>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">MD. Faysal Hossain Tibro</a>
+      </div>
+    </div>
+
+  </footer>

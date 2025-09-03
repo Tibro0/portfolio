@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('page-title')</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -28,6 +29,7 @@
 
     <!-- Main CSS File -->
     <link href="{{ asset('frontend/assets/css/main.css') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend/assets/css/toastr.min.css') }}" rel="stylesheet">
     @yield('css-link')
 </head>
 
@@ -37,9 +39,7 @@
     {{-- Header End --}}
 
     <main class="main">
-
         @yield('content')
-
     </main>
 
     {{-- Footer Start --}}
@@ -64,6 +64,15 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/toastr.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     @yield('js-link')
 </body>
 
