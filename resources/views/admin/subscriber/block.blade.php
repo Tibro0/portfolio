@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('page-title')
-    {{ config('app.name') }} | All Active Subscribers
+    {{ config('app.name') }} | All Block Subscribers
 @endsection
 
 @section('css-link')
@@ -19,12 +19,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-                    <div class="breadcrumb-title border-0 pe-3">All Active Subscribers</div>
+                    <div class="breadcrumb-title border-0 pe-3">All Block Subscribers</div>
                     <div class="ms-auto">
-                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
-                            data-bs-target="#exampleExtraLargeModal">Send News Letter</button>
-                        <a href="{{ route('admin.subscriber.create') }}" class="btn btn-primary px-5">Create
-                            New</a>
+                        {{-- <a href="{{ route('admin.subscriber.create') }}" class="btn btn-primary px-5">Create
+                            New</a> --}}
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -59,48 +57,6 @@
                             @endforelse
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
-@section('model')
-    <!-- Modal -->
-    <div class="modal fade" id="exampleExtraLargeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Send News Letter</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="{{ route('admin.subscriber.sent') }}" method="POST">
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-lg-12">
-                                <label class="form-label">Subject <span class="text-danger">*</span></label>
-                                <input type="text" name="subject"
-                                    class="form-control @error('subject') is-invalid @enderror" value="{{ old('subject') }}"
-                                    placeholder="Subject">
-                                @error('subject')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-12">
-                                <label class="form-label">Message <span class="text-danger">*</span></label>
-                                <div class="col-lg-12">
-                                    <textarea id="summernote" name="message"></textarea>
-                                </div>
-                                @error('message')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-12">
-                                <button type="submit" class="btn btn-primary px-5">Sent Message</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

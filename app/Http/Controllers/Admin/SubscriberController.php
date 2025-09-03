@@ -15,7 +15,7 @@ class SubscriberController extends Controller
      */
     public function index()
     {
-        $subscribers = Subscriber::all();
+        $subscribers = Subscriber::where('status', 1)->get();
         return view('admin.subscriber.index', compact('subscribers'));
     }
 
@@ -38,6 +38,7 @@ class SubscriberController extends Controller
 
         $subscriber = new Subscriber();
         $subscriber->email = $request->email;
+        $subscriber->status = $request->status;
         $subscriber->save();
 
         return redirect()->route('admin.subscriber.index')->with('toast', [
@@ -74,6 +75,7 @@ class SubscriberController extends Controller
 
         $subscriber = Subscriber::findOrFail($id);
         $subscriber->email = $request->email;
+        $subscriber->status = $request->status;
         $subscriber->save();
 
         return redirect()->route('admin.subscriber.index')->with('toast', [
@@ -92,6 +94,12 @@ class SubscriberController extends Controller
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 
+    public function subscriberBlock()
+    {
+        $subscribers = Subscriber::where('status', 0)->get();
+        return view('admin.subscriber.block', compact('subscribers'));
+    }
+
     public function subscriberSent(Request $request)
     {
         $request->validate([
@@ -99,7 +107,7 @@ class SubscriberController extends Controller
             'message' => ['required']
         ]);
 
-        $subscribers = Subscriber::pluck('email')->toArray();
+        $subscribers = Subscriber::where('status', 1)->pluck('email')->toArray();
 
         Mail::to($subscribers)->send(new SubscriberMail($request->subject, $request->message));
 

@@ -117,11 +117,17 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin.subscriber.index') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-home-circle'></i>
                 </div>
                 <div class="menu-title">Subscriber</div>
             </a>
+            <ul>
+                <li> <a href="{{ route('admin.subscriber.index') }}"><i class="bx bx-right-arrow-alt"></i>Active</a>
+                </li>
+                <li> <a href="{{ route('admin.subscriber.block') }}"><i class="bx bx-right-arrow-alt"></i>Block</a>
+                </li>
+            </ul>
         </li>
 
         {{-- <li>

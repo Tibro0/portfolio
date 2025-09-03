@@ -25,6 +25,17 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-12">
+                                    <label class="form-label">Status</label>
+                                    <select name="status" class="form-select">
+                                        <option value="">Select</option>
+                                        <option @selected($subscriber->status === 1) value="1">Active</option>
+                                        <option @selected($subscriber->status === 0) value="0">Block</option>
+                                    </select>
+                                    @error('status')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="col-lg-12">
                                     <button type="submit" class="btn btn-primary px-5">Save Changes</button>
                                 </div>
                             </div>

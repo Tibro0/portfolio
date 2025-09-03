@@ -105,6 +105,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('faq', FaqController::class);
 
     // Subscriber
+    Route::get('/subscriber-block', [SubscriberController::class, 'subscriberBlock'])->name('subscriber.block');
     Route::post('/subscriber-sent', [SubscriberController::class, 'subscriberSent'])->name('subscriber.sent');
     Route::resource('subscriber', SubscriberController::class);
 });
