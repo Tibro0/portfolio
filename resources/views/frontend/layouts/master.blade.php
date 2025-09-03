@@ -65,6 +65,19 @@
     <!-- Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/toastr.min.js') }}"></script>
+    <script>
+        // Display toast messages from session with nullable titles
+        @if (Session::has('toast'))
+            @php
+                $toast = Session::get('toast');
+            @endphp
+            @if (!empty($toast['title']))
+                toastr.{{ $toast['type'] }}('{{ $toast['message'] }}', '{{ $toast['title'] }}');
+            @else
+                toastr.{{ $toast['type'] }}('{{ $toast['message'] }}');
+            @endif
+        @endif
+    </script>
     <script src="{{ asset('frontend/assets/js/jquery-3.6.0.min.js') }}"></script>
     <script>
         $.ajaxSetup({

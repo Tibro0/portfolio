@@ -30,6 +30,7 @@ Route::get('/dashboard', function () {
 
 // Frontend All Route
 Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::post('/contact-form', [FrontendController::class, 'contactForm'])->name('contact-form');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

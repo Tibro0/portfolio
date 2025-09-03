@@ -13,12 +13,20 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $mailName;
+    public $mailEmail;
+    public $mailSubject;
+    public $mailMessage;
+
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($mailName, $mailEmail, $mailSubject, $mailMessage)
     {
-        //
+        $this->mailName = $mailName;
+        $this->mailEmail = $mailEmail;
+        $this->mailSubject = $mailSubject;
+        $this->mailMessage = $mailMessage;
     }
 
     /**
@@ -27,7 +35,7 @@ class ContactFormMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Form Mail',
+            subject: 'You have been a message from Portfolio',
         );
     }
 
@@ -37,7 +45,7 @@ class ContactFormMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.portfolio',
         );
     }
 
