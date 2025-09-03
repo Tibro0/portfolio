@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('avatar')->default('/uploads/avatar.png');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phone_one');
+            $table->string('phone_two')->nullable();
+            $table->string('address_line_one');
+            $table->string('address_line_two')->nullable();
             $table->string('short_description');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

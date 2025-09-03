@@ -22,6 +22,10 @@ class AdminProfileController extends Controller
             'avatar' => ['image', 'nullable', 'mimes:png',],
             'name' => ['required', 'max:255'],
             'email' => ['required', 'max:255', 'unique:users,email,' . Auth::user()->id],
+            'phone_one'=> ['required', 'max:255'],
+            'phone_two'=> ['nullable', 'max:255'],
+            'address_line_one'=> ['required', 'max:255'],
+            'address_line_two'=> ['nullable', 'max:255'],
             'short_description'=> ['required', 'max:255']
         ]);
 
@@ -38,6 +42,10 @@ class AdminProfileController extends Controller
             $user->avatar = $save_url;
             $user->name = $request->name;
             $user->email = $request->email;
+            $user->phone_one = $request->phone_one;
+            $user->phone_two = $request->phone_two;
+            $user->address_line_one = $request->address_line_one;
+            $user->address_line_two = $request->address_line_two;
             $user->short_description = $request->short_description;
             $user->save();
 
@@ -49,6 +57,10 @@ class AdminProfileController extends Controller
             $user = Auth::user();
             $user->name = $request->name;
             $user->email = $request->email;
+            $user->phone_one = $request->phone_one;
+            $user->phone_two = $request->phone_two;
+            $user->address_line_one = $request->address_line_one;
+            $user->address_line_two = $request->address_line_two;
             $user->short_description = $request->short_description;
             $user->save();
 
