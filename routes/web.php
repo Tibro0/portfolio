@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\ProfessionalJourneyController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SocialIconController;
+use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -101,6 +102,9 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Faq
     Route::resource('faq', FaqController::class);
+
+    // Subscriber
+    Route::resource('subscriber', SubscriberController::class);
 });
 
 require __DIR__ . '/auth.php';

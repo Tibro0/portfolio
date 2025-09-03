@@ -116,6 +116,13 @@
                 <div class="menu-title">Faq</div>
             </a>
         </li>
+        <li>
+            <a href="{{ route('admin.subscriber.index') }}">
+                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                </div>
+                <div class="menu-title">Subscriber</div>
+            </a>
+        </li>
 
         {{-- <li>
             <a href="javascript:;" class="has-arrow">
