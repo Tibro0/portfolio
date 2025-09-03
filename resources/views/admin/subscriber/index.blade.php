@@ -10,6 +10,8 @@
     {{-- Bootstrap-icons Css --}}
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" />
+    {{-- summernote Css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.1/summernote-bs5.min.css" />
 @endsection
 
 @section('content')
@@ -19,8 +21,8 @@
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                     <div class="breadcrumb-title border-0 pe-3">All Subscribers</div>
                     <div class="ms-auto">
-                        {{-- <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Update Title</button> --}}
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleExtraLargeModal">Send News Letter</button>
                         <a href="{{ route('admin.subscriber.create') }}" class="btn btn-primary px-5">Create
                             New</a>
                     </div>
@@ -40,8 +42,8 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->email }}</td>
                                     <td>
-                                        <a href="{{ route('admin.subscriber.edit', $item->id) }}"
-                                            class="btn btn-primary"><i class="lni lni-pencil-alt"></i></a>
+                                        <a href="{{ route('admin.subscriber.edit', $item->id) }}" class="btn btn-primary"><i
+                                                class="lni lni-pencil-alt"></i></a>
                                         <a href="{{ route('admin.subscriber.destroy', $item->id) }}" id="delete"
                                             class="btn btn-danger"><i class="lni lni-trash"></i></a>
                                     </td>
@@ -65,43 +67,44 @@
 
 @section('model')
     <!-- Modal -->
-    {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="exampleExtraLargeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update Title</h5>
+                    <h5 class="modal-title">Send News Letter</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('admin.academic-excellences-title-update') }}" method="POST">
+                    <form action="{{ route('admin.subscriber.sent') }}" method="POST">
                         @csrf
-                        @method('PUT')
-                    <div class="row g-3">
-                        <div class="col-lg-12">
-                            <label class="form-label">Academic Excellences Title <span class="text-danger">*</span></label>
-                            <input type="text" name="academic_excellences_title" class="form-control @error('academic_excellences_title') is-invalid @enderror"
-                                value="{{ old('academic_excellences_title') ?? @$title['academic_excellences_title'] }}" placeholder="Academic Excellences Title">
-                            @error('academic_excellences_title')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                        <div class="row g-3">
+                            <div class="col-lg-12">
+                                <label class="form-label">Subject <span class="text-danger">*</span></label>
+                                <input type="text" name="subject"
+                                    class="form-control @error('subject') is-invalid @enderror" value="{{ old('subject') }}"
+                                    placeholder="Subject">
+                                @error('subject')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <label class="form-label">Message <span class="text-danger">*</span></label>
+                                <div class="col-lg-12">
+                                    <textarea id="summernote" name="message"></textarea>
+                                </div>
+                                @error('message')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary px-5">Sent Message</button>
+                            </div>
                         </div>
-                        <div class="col-lg-12">
-                            <label class="form-label">Academic Excellences Description <span class="text-danger">*</span></label>
-                            <input type="text" name="academic_excellences_description" class="form-control @error('academic_excellences_description') is-invalid @enderror"
-                                value="{{ old('academic_excellences_description') ?? @$title['academic_excellences_description'] }}" placeholder="Academic Excellences Description">
-                            @error('academic_excellences_description')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="col-lg-12">
-                            <button type="submit" class="btn btn-primary px-5">Save Changes</button>
-                        </div>
-                    </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection
 
 @section('js-link')
@@ -163,5 +166,12 @@
             })
 
         })
+    </script>
+    {{-- summernote Js --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.9.1/summernote-bs5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
     </script>
 @endsection
