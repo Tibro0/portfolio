@@ -1,18 +1,15 @@
 <footer id="footer" class="footer dark-background">
-
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">{{date('Y')}}</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="sitename">{{date('Y')}}.</strong> <span>All Rights Reserved.</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        @foreach ($socialIcons as $socialIcon)
+        <a target="_blank" href="{{ $socialIcon->url }}"><i class="{{ $socialIcon->icon }}"></i></a>
+        @endforeach
       </div>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">MD. Faysal Hossain Tibro</a>
+        Designed by <a target="_blank" href="https://www.facebook.com/faysaltibro">MD. Faysal Hossain Tibro</a>
       </div>
     </div>
-
   </footer>
