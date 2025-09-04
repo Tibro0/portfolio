@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('page-title')</title>
-    
+
     <!-- Add this to avoid blank WhatsApp previews -->
     <meta property="og:image:alt" content="Faysal Hossain - Full Stack Developer Portfolio">
     <!-- Standard Meta Tags -->
@@ -20,7 +20,7 @@
         content="Professional Full Stack Developer | Laravel, PHP, JavaScript | Freelance Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devtibro.com/"> <!-- ✅ Good! -->
-    <meta property="og:image" content="https://devtibro.com/frontend/images/profile.png"> <!-- CRITICAL FIX -->
+    <meta property="og:image" content="https://devtibro.com/uploads/avatar.png"> <!-- CRITICAL FIX -->
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Faysal's Portfolio">
@@ -30,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MD. Faysal Hossain Tibro | Full Stack Web Developer">
     <meta name="twitter:description" content="Laravel, PHP, JavaScript Developer | Freelance Portfolio">
-    <meta name="twitter:image" content="https://devtibro.com/frontend/images/profile.png"> <!-- 1200x675px -->
+    <meta name="twitter:image" content="https://devtibro.com/uploads/avatar.png"> <!-- 1200x675px -->
 
     <!-- Favicons -->
     <link href="{{ asset('frontend/assets/img/favicon.png') }}" rel="icon" />
