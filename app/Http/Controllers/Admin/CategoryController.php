@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -88,8 +89,12 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        Category::findOrFail($id)->delete();
-
+        $category = Category::findOrFail($id);
+        $portfolio = Portfolio::where('category_id', $category->id)->count();
+        if ($portfolio > 0) {
+            return response(['status' => 'error', 'message' => 'This Items Contain, Sub Items For Delete This you Have to Delete the Sub Item First!']);
+        }
+        $category->delete();
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
     }
 }
