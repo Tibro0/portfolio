@@ -58,10 +58,10 @@ class FrontendController extends Controller
     public function contactForm(Request $request)
     {
         $request->validate([
-            'name'=> ['required', 'max:255'],
-            'email'=> ['required', 'max:255'],
-            'subject'=> ['required', 'max:255'],
-            'message'=> ['required', 'max:1000'],
+            'name' => ['required', 'max:255'],
+            'email' => ['required', 'max:255'],
+            'subject' => ['required', 'max:255'],
+            'message' => ['required', 'max:1000'],
         ]);
 
         $email = User::where('id', 1)->first()->pluck('email')->toArray();
@@ -70,5 +70,12 @@ class FrontendController extends Controller
 
         toastr()->success('Your Message Has been Sent!');
         return redirect()->back();
+    }
+
+    public function downloadCv()
+    {
+        $file =  public_path('frontend/assets/cv/Tibro-resume.pdf');
+
+        return response()->download($file);
     }
 }

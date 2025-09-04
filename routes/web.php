@@ -24,19 +24,22 @@ use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Frontend All Route
-Route::get('/', [FrontendController::class, 'index'])->name('home');
-Route::post('/contact-form', [FrontendController::class, 'contactForm'])->name('contact-form');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::controller(FrontendController::class)->group(function(){
+    Route::get('/', 'index')->name('home');
+    Route::post('/contact-form', 'contactForm')->name('contact-form');
+    Route::get('/download-cv', 'downloadCv')->name('download.cv');
 });
+
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 
 Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

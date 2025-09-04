@@ -36,7 +36,7 @@
                     <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
                         <div class="action-buttons">
                             <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                            <a href="#" class="btn btn-outline">Download Resume</a>
+                            <a href="{{ route('download.cv') }}" class="btn btn-outline">Download Resume</a>
                         </div>
                     </div>
                 </div>
