@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
     <link href="{{ asset('admin/assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/assets/css/icons.css') }}" rel="stylesheet">
-    <title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+    <title>{{ config('app.name') }} | Login</title>
 </head>
 
 <body class="bg-login">
@@ -70,7 +70,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 text-end"> <a
-                                                    href="authentication-forgot-password.html">Forgot Password ?</a>
+                                                    href="{{ route('password.request') }}">Forgot Password ?</a>
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
