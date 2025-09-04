@@ -13,7 +13,7 @@
     <ul class="metismenu" id="menu">
         <li>
             <a href="{{ route('admin.dashboard') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                <div class="parent-icon"><i class="lni lni-dashboard"></i>
                 </div>
                 <div class="menu-title">Dashboard</div>
             </a>
@@ -21,7 +21,7 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="lni lni-support"></i>
                 </div>
                 <div class="menu-title">Hero Section</div>
             </a>
@@ -39,7 +39,7 @@
 
         <li>
             <a href="{{ route('admin.about.index') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                <div class="parent-icon"><i class="lni lni-users"></i>
                 </div>
                 <div class="menu-title">About Section</div>
             </a>
@@ -47,7 +47,7 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="lni lni-signal"></i>
                 </div>
                 <div class="menu-title">Skill Section</div>
             </a>
@@ -67,7 +67,7 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="lni lni-book"></i>
                 </div>
                 <div class="menu-title">Resume Section</div>
             </a>
@@ -81,7 +81,7 @@
 
         <li>
             <a href="{{ route('admin.service.index') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                <div class="parent-icon"><i class="lni lni-service"></i>
                 </div>
                 <div class="menu-title">Service</div>
             </a>
@@ -89,7 +89,7 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="lni lni-world"></i>
                 </div>
                 <div class="menu-title">Portfolio</div>
             </a>
@@ -103,7 +103,7 @@
 
         <li>
             <a href="{{ route('admin.testimonial.index') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                <div class="parent-icon"><i class="lni lni-slice"></i>
                 </div>
                 <div class="menu-title">Testimonial</div>
             </a>
@@ -111,14 +111,15 @@
 
         <li>
             <a href="{{ route('admin.faq.index') }}">
-                <div class="parent-icon"> <i class="bx bx-video-recording"></i>
+                <div class="parent-icon"><i class="lni lni-quotation"></i>
                 </div>
                 <div class="menu-title">Faq</div>
             </a>
         </li>
+
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class="lni lni-pointer-up"></i>
                 </div>
                 <div class="menu-title">Subscriber</div>
             </a>
