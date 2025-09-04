@@ -6,8 +6,31 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('page-title')</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    
+    <!-- Add this to avoid blank WhatsApp previews -->
+    <meta property="og:image:alt" content="Faysal Hossain - Full Stack Developer Portfolio">
+    <!-- Standard Meta Tags -->
+    <meta name="keywords"
+        content="Full Stack Developer, Laravel Developer, PHP Developer, Web Developer, JavaScript, Bootstrap 5, HTML5, CSS3, Freelancer, Portfolio">
+    <meta name="author" content="MD. Faysal Hossain Tibro">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (Facebook/WhatsApp) -->
+    <meta property="og:title" content="MD. Faysal Hossain Tibro | Full Stack Web Developer">
+    <meta property="og:description"
+        content="Professional Full Stack Developer | Laravel, PHP, JavaScript | Freelance Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devtibro.com/"> <!-- ✅ Good! -->
+    <meta property="og:image" content="https://devtibro.com/frontend/images/profile.png"> <!-- CRITICAL FIX -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Faysal's Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card (Recommended) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MD. Faysal Hossain Tibro | Full Stack Web Developer">
+    <meta name="twitter:description" content="Laravel, PHP, JavaScript Developer | Freelance Portfolio">
+    <meta name="twitter:image" content="https://devtibro.com/frontend/images/profile.png"> <!-- 1200x675px -->
 
     <!-- Favicons -->
     <link href="{{ asset('frontend/assets/img/favicon.png') }}" rel="icon" />
