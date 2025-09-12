@@ -60,7 +60,7 @@
                             <div class="col-md-6">
                                 <input type="text" name="name" value="{{ old('name') }}"
                                     class="form-control @error('name') is-invalid border-danger @enderror"
-                                    placeholder="Your name" />
+                                    placeholder="Your name" required/>
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -69,7 +69,7 @@
                             <div class="col-md-6">
                                 <input type="email" name="email" value="{{ old('email') }}"
                                     class="form-control @error('email') is-invalid border-danger @enderror"
-                                    placeholder="Your Email" />
+                                    placeholder="Your Email" required/>
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -78,7 +78,7 @@
                             <div class="col-12">
                                 <input type="text"
                                     class="form-control @error('subject') is-invalid border-danger @enderror"
-                                    name="subject" value="{{ old('subject') }}" placeholder="Subject" />
+                                    name="subject" value="{{ old('subject') }}" placeholder="Subject" required/>
                                 @error('subject')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -86,7 +86,7 @@
 
                             <div class="col-12">
                                 <textarea class="form-control @error('message') is-invalid border-danger @enderror" name="message" rows="6"
-                                    placeholder="Message">{{ old('message') }}</textarea>
+                                    placeholder="Message" required>{{ old('message') }}</textarea>
                                 @error('message')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
