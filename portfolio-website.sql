@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 04, 2025 at 10:10 AM
+-- Generation Time: Sep 12, 2025 at 01:15 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.23
 
@@ -41,7 +41,7 @@ CREATE TABLE `abouts` (
 --
 
 INSERT INTO `abouts` (`id`, `signature`, `signature_description`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'frontend/assets/img/misc/signature-1.webp', 'Building meaningful digital experiences through creative code.', 'Full-Stack Developer skilled in building and maintaining dynamic web applications. Proficient in Laravel, PHP, HTML, CSS, Bootstrap, JavaScript and jQuery. Adept at problem-solving and collaborating effectively within a team. Possesses strong communication skills, enabling clear and concise interaction with both technical and non-technical stakeholders. Dedicated to delivering high-quality, user-focused solutions while continuously expanding my technical expertise. Seeking a challenging role where I can leverage my full-stack capabilities and contribute to a collaborative environment.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'frontend/assets/img/misc/signature-1.webp', 'Building meaningful digital experiences through creative code.', 'Full-Stack Developer skilled in building and maintaining dynamic web applications. Proficient in Laravel, PHP, HTML, CSS, Bootstrap, JavaScript and jQuery. Adept at problem-solving and collaborating effectively within a team. Possesses strong communication skills, enabling clear and concise interaction with both technical and non-technical stakeholders. Dedicated to delivering high-quality, user-focused solutions while continuously expanding my technical expertise. Seeking a challenging role where I can leverage my full-stack capabilities and contribute to a collaborative environment.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -64,9 +64,9 @@ CREATE TABLE `academic_excellences` (
 --
 
 INSERT INTO `academic_excellences` (`id`, `year`, `title`, `sub_title`, `description`, `created_at`, `updated_at`) VALUES
-(1, '2025', 'Dhaka Central Polytechnic Institute', 'Diploma Engineering Computer Technology', 'Diploma in Computer Engineering from DCPI. Proficient in Laravel, PHP, and Wordpress. Strong foundation in computer hardware and software.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, '2018', 'Mission International School & Collage', 'Secondary School Certificate', 'Secondary School Certificate from Mission International School & Collage. Proficient in English, Mathematics, Science. Eager to learn and grow.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, '2015', 'Mission International School & Collage', 'Junior School Certificate', 'Junior School Certificate from Mission International School & Collage. Proficient in English, Mathematics, Science. Eager to learn and grow.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, '2025', 'Dhaka Central Polytechnic Institute', 'Diploma Engineering Computer Technology', 'Diploma in Computer Engineering from DCPI. Proficient in Laravel, PHP, and Wordpress. Strong foundation in computer hardware and software.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, '2018', 'Mission International School & Collage', 'Secondary School Certificate', 'Secondary School Certificate from Mission International School & Collage. Proficient in English, Mathematics, Science. Eager to learn and grow.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, '2015', 'Mission International School & Collage', 'Junior School Certificate', 'Junior School Certificate from Mission International School & Collage. Proficient in English, Mathematics, Science. Eager to learn and grow.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -86,10 +86,10 @@ CREATE TABLE `animation_texts` (
 --
 
 INSERT INTO `animation_texts` (`id`, `title`, `created_at`, `updated_at`) VALUES
-(1, 'Laravel Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'PHP Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'Web Designer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'Web Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Laravel Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'PHP Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'Web Designer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'Web Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -110,9 +110,9 @@ CREATE TABLE `backend_skills` (
 --
 
 INSERT INTO `backend_skills` (`id`, `title`, `percentage`, `created_at`, `updated_at`) VALUES
-(1, 'PHP', '95', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'Laravel', '95', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'MySQL', '94', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'PHP', '95', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'Laravel', '95', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'MySQL', '94', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -157,9 +157,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'Laravel', 'laravel', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'Web Design', 'web-design', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'Web Development', 'web-development', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Laravel', 'laravel', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'Web Design', 'web-design', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'Web Development', 'web-development', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -179,10 +179,10 @@ CREATE TABLE `certifications` (
 --
 
 INSERT INTO `certifications` (`id`, `title`, `created_at`, `updated_at`) VALUES
-(1, 'Laravel Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'PHP Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'Web Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'Web Designer', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Laravel Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'PHP Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'Web Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'Web Designer', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -203,9 +203,9 @@ CREATE TABLE `cloud_skills` (
 --
 
 INSERT INTO `cloud_skills` (`id`, `title`, `percentage`, `created_at`, `updated_at`) VALUES
-(1, 'Git', '99', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'AWS', '98', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'cPanel ', '98', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Git', '99', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'AWS', '98', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'cPanel ', '98', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -227,9 +227,9 @@ CREATE TABLE `counters` (
 --
 
 INSERT INTO `counters` (`id`, `icon`, `number`, `title`, `created_at`, `updated_at`) VALUES
-(1, 'bi bi-trophy', '1', 'Years Experience', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'bi bi-diagram-3', '5', 'Projects Completed', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'bi bi-people', '5', 'Happy Clients', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'bi bi-trophy', '1', 'Years Experience', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'bi bi-diagram-3', '5', 'Projects Completed', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'bi bi-people', '5', 'Happy Clients', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -250,9 +250,9 @@ CREATE TABLE `design_skills` (
 --
 
 INSERT INTO `design_skills` (`id`, `title`, `percentage`, `created_at`, `updated_at`) VALUES
-(1, 'Figma', '95', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'Photoshop', '96', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'Illustrator', '94', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Figma', '95', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'Photoshop', '96', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'Illustrator', '94', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -289,16 +289,16 @@ CREATE TABLE `faqs` (
 --
 
 INSERT INTO `faqs` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALUES
-(1, 'Why do you prefer Laravel over other PHP frameworks?', 'Laravel provides an elegant syntax and a robust set of tools (Eloquent ORM, Blade templating, Artisan CLI) that dramatically speed up development while ensuring code is maintainable and secure. Its massive ecosystem and strong community support make it the best choice for building modern, scalable web applications.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'How do you handle security in your Laravel applications?', 'Security is a priority. I leverage Laravel\'s built-in protections against common vulnerabilities like SQL injection, Cross-Site Request Forgery (CSRF), and Cross-Site Scripting (XSS). I also implement best practices such as input validation, parameter binding, secure authentication, and proper user role/permission management.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'Can you integrate third-party APIs?', 'Absolutely. I have extensive experience integrating various RESTful and SOAP APIs for payment gateways (Stripe, PayPal), email services (Mailchimp, SendGrid), SMS services, and mapping services (Google Maps) into Laravel applications.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'Do you work with databases besides MySQL?', 'While MySQL/PostgreSQL are the most common databases used with Laravel, I am also proficient in working with SQLite for development/testing and have experience with MongoDB for NoSQL-based projects.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(5, 'What is your experience with Laravel Livewire or Alpine.js?', 'I have practical experience using both Livewire and Alpine.js to create dynamic, modern interfaces without the complexity of a full frontend framework like Vue or React. This allows me to build highly interactive features while staying within the productive Laravel ecosystem.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(6, 'Do you code designs from scratch or use templates?', 'I am skilled in both. I can expertly convert a Figma/Adobe XD design mockup into clean, semantic HTML/CSS code. I also effectively use and customize Bootstrap 5 templates to accelerate development while ensuring a unique and professional final product that matches your brand.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(7, 'Why do you use Bootstrap 5?', 'Bootstrap 5 provides a powerful, mobile-first grid system and a comprehensive component library. It ensures the websites I build are fully responsive, consistent across browsers, and developed efficiently. I am proficient in customizing it with Sass to match any design language, avoiding the \"generic Bootstrap look.\"', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(8, 'Is the website you build for me going to be responsive?', 'Absolutely. Every website I develop is built with a \"mobile-first\" approach. This means your site will provide an optimal viewing and interaction experience—easy reading and navigation with minimal resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop monitors).\"', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(9, 'How do you ensure website performance and fast loading times?', 'I optimize frontend performance by minifying CSS/JS, optimizing images (using modern formats like WebP), leveraging browser caching, and writing efficient code. For Laravel, I use techniques like eager loading, caching queries, and asset compression to ensure swift backend performance.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(10, 'Do you work with JavaScript frameworks like React or Vue.js?', 'My core frontend expertise lies in creating robust interfaces with HTML, CSS, and Bootstrap 5, often enhanced with vanilla JavaScript and Alpine.js for interactivity. For projects requiring a complex Single Page Application (SPA), I can collaborate with a dedicated React/Vue developer or utilize Laravel\'s API capabilities to serve a separate frontend.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'Why do you prefer Laravel over other PHP frameworks?', 'Laravel provides an elegant syntax and a robust set of tools (Eloquent ORM, Blade templating, Artisan CLI) that dramatically speed up development while ensuring code is maintainable and secure. Its massive ecosystem and strong community support make it the best choice for building modern, scalable web applications.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'How do you handle security in your Laravel applications?', 'Security is a priority. I leverage Laravel\'s built-in protections against common vulnerabilities like SQL injection, Cross-Site Request Forgery (CSRF), and Cross-Site Scripting (XSS). I also implement best practices such as input validation, parameter binding, secure authentication, and proper user role/permission management.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'Can you integrate third-party APIs?', 'Absolutely. I have extensive experience integrating various RESTful and SOAP APIs for payment gateways (Stripe, PayPal), email services (Mailchimp, SendGrid), SMS services, and mapping services (Google Maps) into Laravel applications.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'Do you work with databases besides MySQL?', 'While MySQL/PostgreSQL are the most common databases used with Laravel, I am also proficient in working with SQLite for development/testing and have experience with MongoDB for NoSQL-based projects.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(5, 'What is your experience with Laravel Livewire or Alpine.js?', 'I have practical experience using both Livewire and Alpine.js to create dynamic, modern interfaces without the complexity of a full frontend framework like Vue or React. This allows me to build highly interactive features while staying within the productive Laravel ecosystem.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(6, 'Do you code designs from scratch or use templates?', 'I am skilled in both. I can expertly convert a Figma/Adobe XD design mockup into clean, semantic HTML/CSS code. I also effectively use and customize Bootstrap 5 templates to accelerate development while ensuring a unique and professional final product that matches your brand.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(7, 'Why do you use Bootstrap 5?', 'Bootstrap 5 provides a powerful, mobile-first grid system and a comprehensive component library. It ensures the websites I build are fully responsive, consistent across browsers, and developed efficiently. I am proficient in customizing it with Sass to match any design language, avoiding the \"generic Bootstrap look.\"', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(8, 'Is the website you build for me going to be responsive?', 'Absolutely. Every website I develop is built with a \"mobile-first\" approach. This means your site will provide an optimal viewing and interaction experience—easy reading and navigation with minimal resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop monitors).\"', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(9, 'How do you ensure website performance and fast loading times?', 'I optimize frontend performance by minifying CSS/JS, optimizing images (using modern formats like WebP), leveraging browser caching, and writing efficient code. For Laravel, I use techniques like eager loading, caching queries, and asset compression to ensure swift backend performance.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(10, 'Do you work with JavaScript frameworks like React or Vue.js?', 'My core frontend expertise lies in creating robust interfaces with HTML, CSS, and Bootstrap 5, often enhanced with vanilla JavaScript and Alpine.js for interactivity. For projects requiring a complex Single Page Application (SPA), I can collaborate with a dedicated React/Vue developer or utilize Laravel\'s API capabilities to serve a separate frontend.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -319,9 +319,9 @@ CREATE TABLE `frontend_skills` (
 --
 
 INSERT INTO `frontend_skills` (`id`, `title`, `percentage`, `created_at`, `updated_at`) VALUES
-(1, 'HTML/CSS', '98', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'BOOTSTRAP5', '98', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'JavaScript', '95', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'HTML/CSS', '98', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'BOOTSTRAP5', '98', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'JavaScript', '95', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -436,12 +436,12 @@ CREATE TABLE `portfolios` (
 --
 
 INSERT INTO `portfolios` (`id`, `category_id`, `thumb_image`, `frontend_title`, `frontend_description`, `preview_title`, `preview_description`, `live_link`, `github_link`, `created_at`, `updated_at`) VALUES
-(1, 1, 'frontend/assets/img/portfolio/portfolio-1.png', 'Multi Vendor E-commerce Website', 'Multi-Vendor E-Commerce Hub', 'Multi Vendor E-commerce Website', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://ecommerce.devtibro.com/', 'https://github.com/Tibro0/multi-vendor-ecommerce-website-laravel', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 1, 'frontend/assets/img/portfolio/portfolio-2.png', 'Restaurant Management Website', 'All-in-one restaurant management platform.', 'Restaurant Management Website', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://food-park.devtibro.com/', 'https://github.com/Tibro0/food-park-laravel', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 3, 'frontend/assets/img/portfolio/portfolio-3.png', 'Learning Management System', 'Learn. Track. Succeed. All-in-One.', 'Learning Management System', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://lms.devtibro.com/', '', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 2, 'frontend/assets/img/portfolio/portfolio-4.png', 'Construction Company', 'Crafting Digital Excellence', 'Construction Company', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/Buildx/', 'https://github.com/Tibro0/Buildx', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(5, 2, 'frontend/assets/img/portfolio/portfolio-5.png', 'Charite Website', 'Europe\'s leading research hospital.', 'Charite Website', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/chariteam/', 'https://github.com/Tibro0/chariteam', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(6, 2, 'frontend/assets/img/portfolio/portfolio-6.png', 'Frontend Project', 'Interactive Web App Builder', 'Frontend Project', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/Securex/', 'https://github.com/Tibro0/Securex', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 1, 'frontend/assets/img/portfolio/portfolio-1.png', 'Multi Vendor E-commerce Website', 'Multi-Vendor E-Commerce Hub', 'Multi Vendor E-commerce Website', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://ecommerce.devtibro.com/', 'https://github.com/Tibro0/multi-vendor-ecommerce-website-laravel', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 1, 'frontend/assets/img/portfolio/portfolio-2.png', 'Restaurant Management Website', 'All-in-one restaurant management platform.', 'Restaurant Management Website', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://food-park.devtibro.com/', 'https://github.com/Tibro0/food-park-laravel', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 3, 'frontend/assets/img/portfolio/portfolio-3.png', 'Learning Management System', 'Learn. Track. Succeed. All-in-One.', 'Learning Management System', 'Language : Laravel, PHP, Bootstrap, HTML5, CSS3, JavaScript, jQuery.', 'https://lms.devtibro.com/', '', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 2, 'frontend/assets/img/portfolio/portfolio-4.png', 'Construction Company', 'Crafting Digital Excellence', 'Construction Company', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/Buildx/', 'https://github.com/Tibro0/Buildx', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(5, 2, 'frontend/assets/img/portfolio/portfolio-5.png', 'Charite Website', 'Europe\'s leading research hospital.', 'Charite Website', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/chariteam/', 'https://github.com/Tibro0/chariteam', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(6, 2, 'frontend/assets/img/portfolio/portfolio-6.png', 'Frontend Project', 'Interactive Web App Builder', 'Frontend Project', 'Language : HTML5, CSS3, Bootstrap, JavaScript, jQuery.', 'https://tibro0.github.io/Securex/', 'https://github.com/Tibro0/Securex', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -464,10 +464,10 @@ CREATE TABLE `professional_journeys` (
 --
 
 INSERT INTO `professional_journeys` (`id`, `year`, `title`, `sub_title`, `description`, `created_at`, `updated_at`) VALUES
-(1, '2025 June - Present', 'SoClose Dhaka Limited', 'Full Stack Web Developer (Php & Laravel)', 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, '2025 January - 2025 May', 'Udemy Online Courses - Laravel', 'Web Solution US', 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, '2024 January - 2024 December', 'Shikhbe Shobai', 'Full Stack Web Development - PHP Laravel', 'Shikhbe Shobai: Bangladesh\'s premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, '2023 January - 2023 December', 'Shikhbe Shobai', 'Full Stack Web Development - Wordpress', 'Shikhbe Shobai: Bangladesh\'s premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, '2025 January - 2025 August', 'SoClose Dhaka Limited', 'Full Stack Web Developer (Php & Laravel)', 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, '2025 January - 2025 May', 'Udemy Online Courses - Laravel', 'Web Solution US', 'Delivering cutting-edge web solutions for businesses of all sizes. From design and development to digital marketing, we drive online success.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, '2024 January - 2024 December', 'Shikhbe Shobai', 'Full Stack Web Development - PHP Laravel', 'Shikhbe Shobai: Bangladesh\'s premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, '2023 January - 2023 December', 'Shikhbe Shobai', 'Full Stack Web Development - Wordpress', 'Shikhbe Shobai: Bangladesh\'s premier IT training institute. Learn in-demand skills: web development, programming, digital marketing, and more.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -488,12 +488,12 @@ CREATE TABLE `section_titles` (
 --
 
 INSERT INTO `section_titles` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'professional_expertise_title', 'Professional Expertise', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'professional_expertise_description', 'Strategic leader driving tech innovation & growth. Expert in scaling startups to enterprises. Transformative results through agile execution & cross-functional team leadership.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'professional_journey_title', 'Professional Journey', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'professional_journey_description', 'I transform complex challenges into innovative digital solutions. Leading agile teams from startup ventures to corporate strategy, I bridge the gap between vision and execution to drive measurable growth.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(5, 'academic_excellences_title', 'Academic Excellence', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(6, 'academic_excellences_description', 'Distinguished by rigorous research, high-impact publications, and a relentless pursuit of knowledge. Proven ability to synthesize complex concepts into innovative, field-advancing contributions.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'professional_expertise_title', 'Professional Expertise', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'professional_expertise_description', 'Strategic leader driving tech innovation & growth. Expert in scaling startups to enterprises. Transformative results through agile execution & cross-functional team leadership.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'professional_journey_title', 'Professional Journey', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'professional_journey_description', 'I transform complex challenges into innovative digital solutions. Leading agile teams from startup ventures to corporate strategy, I bridge the gap between vision and execution to drive measurable growth.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(5, 'academic_excellences_title', 'Academic Excellence', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(6, 'academic_excellences_description', 'Distinguished by rigorous research, high-impact publications, and a relentless pursuit of knowledge. Proven ability to synthesize complex concepts into innovative, field-advancing contributions.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -515,12 +515,12 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `icon`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'bi bi-filetype-php', 'PHP', 'PHP Development, Custom Web Applications, API Development, CMS Integration, E-commerce Solutions.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'bi bi-browser-edge', 'Laravel', 'Custom Laravel Development, API Integration, E-commerce Solutions, Web App Maintenance, Cloud Deployment.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'bi bi-webcam', 'Web Design', 'Website Design & Development, UI/UX Design, Branding, Logo Design, Responsive Websites.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'bi bi-browser-chrome', 'Web Development', 'Website Design & Development, E-commerce Solutions, SEO, UI/UX, Mobile-Responsive Websites.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(5, 'bi bi-bootstrap', 'Bootstrap', 'Responsive web design with Bootstrap. Create beautiful, cross-browser compatible websites.', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(6, 'bi bi-filetype-js', 'jQuery', 'jQuery Development, AJAX Interactions, DOM Manipulation, Front-End Animations, Plugin Development.', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'bi bi-filetype-php', 'PHP', 'PHP Development, Custom Web Applications, API Development, CMS Integration, E-commerce Solutions.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'bi bi-browser-edge', 'Laravel', 'Custom Laravel Development, API Integration, E-commerce Solutions, Web App Maintenance, Cloud Deployment.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'bi bi-webcam', 'Web Design', 'Website Design & Development, UI/UX Design, Branding, Logo Design, Responsive Websites.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'bi bi-browser-chrome', 'Web Development', 'Website Design & Development, E-commerce Solutions, SEO, UI/UX, Mobile-Responsive Websites.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(5, 'bi bi-bootstrap', 'Bootstrap', 'Responsive web design with Bootstrap. Create beautiful, cross-browser compatible websites.', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(6, 'bi bi-filetype-js', 'jQuery', 'jQuery Development, AJAX Interactions, DOM Manipulation, Front-End Animations, Plugin Development.', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -542,7 +542,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('YPu8LN69Yn8PY3lZozJ6RwL1NhiU2A6UHFvLLWY1', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibDNmZTFTaHprNlBobEEwWWpqNmRQdzBlS0F1b2t3VUFMRkFwRUJPSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1756979288);
+('e7fMwbY5L602Q0a0eISfABi0QEaw9rD6k6iOI73r', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiN21nbHZta3JuOFhydHFRb0d3TUFDQURHZlZTVkd5cmFBVGxrMlN2SyI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1757682903);
 
 -- --------------------------------------------------------
 
@@ -563,10 +563,10 @@ CREATE TABLE `skill_card_titles` (
 --
 
 INSERT INTO `skill_card_titles` (`id`, `icon`, `title`, `created_at`, `updated_at`) VALUES
-(1, 'bi bi-code-slash', 'Frontend Development', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'bi bi-server', 'Backend Development', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'bi bi-palette', 'Design & Tools', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'bi bi-cloud', 'Cloud & DevOps', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'bi bi-code-slash', 'Frontend Development', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'bi bi-server', 'Backend Development', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'bi bi-palette', 'Design & Tools', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'bi bi-cloud', 'Cloud & DevOps', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -587,10 +587,10 @@ CREATE TABLE `social_icons` (
 --
 
 INSERT INTO `social_icons` (`id`, `icon`, `url`, `created_at`, `updated_at`) VALUES
-(1, 'bi bi-github', 'https://github.com/tibro0', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'bi bi-facebook', 'https://www.facebook.com/faysaltibro', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'bi bi-linkedin', 'https://www.linkedin.com/in/md-faysal-hossain-tibro-1aa622226/', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'bi bi-whatsapp', 'https://api.whatsapp.com/send/?phone=8801734449023&text=Hello&type=phone_number&app_absent=0', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'bi bi-github', 'https://github.com/tibro0', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'bi bi-facebook', 'https://www.facebook.com/faysaltibro', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'bi bi-linkedin', 'https://www.linkedin.com/in/md-faysal-hossain-tibro-1aa622226/', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'bi bi-whatsapp', 'https://api.whatsapp.com/send/?phone=8801734449023&text=Hello&type=phone_number&app_absent=0', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -605,13 +605,6 @@ CREATE TABLE `subscribers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `subscribers`
---
-
-INSERT INTO `subscribers` (`id`, `email`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'faysaltibro@gmail.com', 1, '2025-09-04 02:49:12', '2025-09-04 02:49:12');
 
 -- --------------------------------------------------------
 
@@ -632,9 +625,9 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `icon`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'bi bi-database', 'Laravel Developer', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'bi bi-code-slash', 'Web Development', '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'bi bi-pc-display-horizontal', 'Web Design', '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'bi bi-database', 'Laravel Developer', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'bi bi-code-slash', 'Web Development', '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'bi bi-pc-display-horizontal', 'Web Design', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -658,10 +651,10 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `image`, `name`, `designation`, `description`, `ratting`, `created_at`, `updated_at`) VALUES
-(1, 'frontend/assets/img/person/person-f-1.webp', 'Jane Smith', 'Book Enthusiast', 'Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat.', 5, '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(2, 'frontend/assets/img/person/person-m-2.webp', 'Michael Johnson', 'Sci-Fi Blogger', 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus.', 5, '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(3, 'frontend/assets/img/person/person-f-3.webp', 'Emily Davis', 'Book Club President', 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.', 5, '2025-09-03 12:02:57', '2025-09-03 12:02:57'),
-(4, 'frontend/assets/img/person/person-m-4.webp', 'Robert Wilson', 'Literary Reviewer', 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur.', 5, '2025-09-03 12:02:57', '2025-09-03 12:02:57');
+(1, 'frontend/assets/img/person/person-f-1.webp', 'Jane Smith', 'Book Enthusiast', 'Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat.', 5, '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(2, 'frontend/assets/img/person/person-m-2.webp', 'Michael Johnson', 'Sci-Fi Blogger', 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus.', 5, '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(3, 'frontend/assets/img/person/person-f-3.webp', 'Emily Davis', 'Book Club President', 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.', 5, '2025-09-12 07:14:51', '2025-09-12 07:14:51'),
+(4, 'frontend/assets/img/person/person-m-4.webp', 'Robert Wilson', 'Literary Reviewer', 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur.', 5, '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 -- --------------------------------------------------------
 
@@ -691,7 +684,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `avatar`, `name`, `email`, `phone_one`, `phone_two`, `address_line_one`, `address_line_two`, `short_description`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '/uploads/avatar.png', 'MD. Faysal Hoaasin Tibro', 'faysaltibro@gmail.com', '+8801734449023', NULL, 'House No : 101, Maowlana Vashani Road,', 'Tongi East, Banomala Road.', 'Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.', '2025-09-03 12:02:57', '$2y$12$xehBvUrsIiZ/QOOIMk3Che4eQpuJzZK/KogIMDweSPAzvvBC0Gmb.', 'TD8BLdZDuJUfDXrspWPE9j9wjLvUEpkwC2oJTlDjDlyHGVa0fAPFmA3hZNwO', '2025-09-03 12:02:57', '2025-09-04 00:56:24');
+(1, '/uploads/avatar.png', 'MD. Faysal Hossain Tibro', 'faysaltibro@gmail.com', '+8801734449023', NULL, 'House No : 101, Maowlana Vashani Road,', 'Tongi East, Banomala Road.', 'Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.', '2025-09-12 07:14:50', '$2y$12$n5qMg7nGOyb0CIXELNSPEOPCRz0ui4XHVxIJihiaVL6W9NzN6nMMi', 'rPgxBJibbd', '2025-09-12 07:14:51', '2025-09-12 07:14:51');
 
 --
 -- Indexes for dumped tables
@@ -1005,7 +998,7 @@ ALTER TABLE `social_icons`
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tags`
