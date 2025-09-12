@@ -20,6 +20,8 @@
                     <div class="breadcrumb-title border-0 pe-3">All Professional Journeys</div>
                     <div class="ms-auto">
                         <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                                        data-bs-target="#mainTitleUpdate">Main Title Update</button>
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Update Title</button>
                         <a href="{{ route('admin.professional-journey.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
@@ -100,6 +102,48 @@
                             <button type="submit" class="btn btn-primary px-5">Save Changes</button>
                         </div>
                     </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section Title Update Modal -->
+    <div class="modal fade" id="mainTitleUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resume Title Update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('admin.resume.main-title.update') }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="row g-3">
+                            <div class="col-lg-12">
+                                <label class="form-label">Resume Main Title <span class="text-danger">*</span></label>
+                                <input type="text" name="resume_main_title"
+                                    class="form-control @error('resume_main_title') is-invalid @enderror"
+                                    value="{{ old('resume_main_title') ?? @$title['resume_main_title'] }}" placeholder="Resume Main Title">
+                                @error('resume_main_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <label class="form-label">Resume Sub Title <span class="text-danger">*</span></label>
+                                <input type="text" name="resume_sub_title"
+                                    class="form-control @error('resume_sub_title') is-invalid @enderror"
+                                    value="{{ old('resume_sub_title') ?? @$title['resume_sub_title'] }}" placeholder="Resume Sub Title">
+                                @error('resume_sub_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary px-5">Save Changes</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -14,7 +14,7 @@ class ProfessionalJourneyController extends Controller
      */
     public function index()
     {
-        $keys = ['professional_journey_title', 'professional_journey_description'];
+        $keys = ['professional_journey_title', 'professional_journey_description', 'resume_main_title', 'resume_sub_title'];
         $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $professionalJourneys = ProfessionalJourney::all();
         return view('admin.resume.professional-journey.index', compact('title', 'professionalJourneys'));
@@ -110,6 +110,26 @@ class ProfessionalJourneyController extends Controller
         $validatedData = $request->validate([
             'professional_journey_title' => ['max:255'],
             'professional_journey_description' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
+    }
+
+    public function resumeMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'resume_main_title' => ['max:255'],
+            'resume_sub_title' => ['max:255'],
         ]);
 
         foreach ($validatedData as $key => $value) {

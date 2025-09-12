@@ -1,8 +1,8 @@
 <section id="resume" class="resume section">
     <!-- Section Title -->
     <div class="container section-title">
-        <h2>Resume</h2>
-        <p>Tech leader driving innovation & growth through transformative execution.</p>
+        <h2>{{$sectionTitle['resume_main_title']}}</h2>
+        <p>{{$sectionTitle['resume_sub_title']}}</p>
     </div>
     <!-- End Section Title -->
 
