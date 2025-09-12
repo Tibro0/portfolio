@@ -62,6 +62,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::controller(AboutController::class)->group(function () {
         Route::get('about', 'index')->name('about.index');
         Route::post('about/update', 'aboutUpdate')->name('about.update');
+        Route::put('about/main-title/update', 'aboutMainTitleUpdate')->name('about.main-title.update');
     });
 
     // Frontend Skill

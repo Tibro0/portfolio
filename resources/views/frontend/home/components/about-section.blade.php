@@ -1,8 +1,8 @@
 <section id="about" class="about section">
     <!-- Section Title -->
     <div class="container section-title">
-        <h2>About</h2>
-        <p>Tech leader driving growth through innovative solutions and transformative execution.</p>
+        <h2>{{ $sectionTitle['about_main_title'] }}</h2>
+        <p>{{ $sectionTitle['about_sub_title'] }}</p>
     </div>
     <!-- End Section Title -->
 
@@ -11,12 +11,10 @@
             <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                 <div class="profile-image-wrapper">
                     <div class="profile-image">
-                        <img src="{{ asset($user->avatar) }}" alt="Profile"
-                            class="img-fluid" />
+                        <img src="{{ asset($user->avatar) }}" alt="Profile" class="img-fluid" />
                     </div>
                     <div class="signature-section">
-                        <img src="{{ asset($about->signature) }}" alt="Signature"
-                            class="signature" />
+                        <img src="{{ asset($about->signature) }}" alt="Signature" class="signature" />
                         <p class="quote">
                             {{ $about->signature_description }}
                         </p>
