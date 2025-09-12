@@ -99,6 +99,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('service', ServiceController::class);
 
     // Category
+    Route::put('portfolio/main-title/update', [CategoryController::class, 'portfolioMainTitleUpdate'])->name('portfolio.main-title.update');
     Route::resource('category', CategoryController::class);
 
     // Portfolio

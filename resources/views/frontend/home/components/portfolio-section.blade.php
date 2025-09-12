@@ -1,8 +1,8 @@
 <section id="portfolio" class="portfolio section">
     <!-- Section Title -->
     <div class="container section-title">
-        <h2>Portfolio</h2>
-        <p>Innovative tech solutions delivered through strategic leadership and relentless execution.</p>
+        <h2>{{ $sectionTitle['portfolio_main_title'] }}</h2>
+        <p>{{ $sectionTitle['portfolio_sub_title'] }}</p>
     </div>
     <!-- End Section Title -->
 

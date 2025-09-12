@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Portfolio;
+use App\Models\SectionTitle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -15,8 +16,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $keys = ['portfolio_main_title', 'portfolio_sub_title'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $categories = Category::all();
-        return view('admin.portfolio.category.index', compact('categories'));
+        return view('admin.portfolio.category.index', compact('title','categories'));
     }
 
     /**
@@ -96,5 +99,25 @@ class CategoryController extends Controller
         }
         $category->delete();
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function portfolioMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'portfolio_main_title' => ['max:255'],
+            'portfolio_sub_title' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }

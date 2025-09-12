@@ -86,6 +86,18 @@ class SectionTitleSeeder extends Seeder
                 'created_at'=> now(),
                 'updated_at'=> now(),
             ],
+            [
+                'key'=> 'portfolio_main_title',
+                'value'=> 'Portfolio',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'key'=> 'portfolio_sub_title',
+                'value'=> 'Innovative tech solutions delivered through strategic leadership and relentless execution.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
         ]);
     }
 }
