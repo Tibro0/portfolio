@@ -1,8 +1,8 @@
 <section id="testimonials" class="testimonials section">
     <!-- Section Title -->
     <div class="container section-title">
-        <h2>Testimonials</h2>
-        <p>Praise for precision and impact—client testimonials highlight delivered excellence.</p>
+        <h2>{{$sectionTitle['testimonial_main_title']}}</h2>
+        <p>{{$sectionTitle['testimonial_sub_title']}}</p>
     </div>
     <!-- End Section Title -->
 

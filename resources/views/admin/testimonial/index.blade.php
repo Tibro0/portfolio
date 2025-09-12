@@ -19,6 +19,8 @@
                 <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                     <div class="breadcrumb-title border-0 pe-3">All Testimonials</div>
                     <div class="ms-auto">
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Main Title Update</button>
                         <a href="{{ route('admin.testimonial.create') }}" class="btn btn-primary px-5">Create New</a>
                     </div>
                 </div>
@@ -49,8 +51,8 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="{{ route('admin.testimonial.edit', $item->id) }}" class="btn btn-primary"><i
-                                                class="lni lni-pencil-alt"></i></a>
+                                        <a href="{{ route('admin.testimonial.edit', $item->id) }}"
+                                            class="btn btn-primary"><i class="lni lni-pencil-alt"></i></a>
                                         <a href="{{ route('admin.testimonial.destroy', $item->id) }}" id="delete"
                                             class="btn btn-danger"><i class="lni lni-trash"></i></a>
                                     </td>
@@ -71,6 +73,52 @@
         </div>
     </div>
 @endsection
+
+@section('model')
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Testimonial Title Update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('admin.testimonial.main-title.update') }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="row g-3">
+                            <div class="col-lg-12">
+                                <label class="form-label">Testimonial Main Title <span class="text-danger">*</span></label>
+                                <input type="text" name="testimonial_main_title"
+                                    class="form-control @error('testimonial_main_title') is-invalid @enderror"
+                                    value="{{ old('testimonial_main_title') ?? @$title['testimonial_main_title'] }}"
+                                    placeholder="Testimonial Main Title">
+                                @error('testimonial_main_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <label class="form-label">Testimonial Sub Title <span class="text-danger">*</span></label>
+                                <input type="text" name="testimonial_sub_title"
+                                    class="form-control @error('testimonial_sub_title') is-invalid @enderror"
+                                    value="{{ old('testimonial_sub_title') ?? @$title['testimonial_sub_title'] }}"
+                                    placeholder="Testimonial Sub Title">
+                                @error('testimonial_sub_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary px-5">Save Changes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
 
 @section('js-link')
     {{-- dataTables Js --}}

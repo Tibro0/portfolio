@@ -98,6 +98,18 @@ class SectionTitleSeeder extends Seeder
                 'created_at'=> now(),
                 'updated_at'=> now(),
             ],
+            [
+                'key'=> 'testimonial_main_title',
+                'value'=> 'Testimonials',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'key'=> 'testimonial_sub_title',
+                'value'=> 'Praise for precision and impact—client testimonials highlight delivered excellence.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
         ]);
     }
 }

@@ -106,6 +106,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('portfolio', PortfolioController::class);
 
     // Testimonial
+    Route::put('testimonial/main-title/update', [TestimonialController::class, 'testimonialMainTitleUpdate'])->name('testimonial.main-title.update');
     Route::resource('testimonial', TestimonialController::class);
 
     // Faq

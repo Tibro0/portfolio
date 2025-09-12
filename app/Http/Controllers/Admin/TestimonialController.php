@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\SectionTitle;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
@@ -15,8 +16,10 @@ class TestimonialController extends Controller
      */
     public function index()
     {
+        $keys = ['testimonial_main_title', 'testimonial_sub_title'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $testimonials = Testimonial::all();
-        return view('admin.testimonial.index', compact('testimonials'));
+        return view('admin.testimonial.index', compact('title','testimonials'));
     }
 
     /**
@@ -140,5 +143,25 @@ class TestimonialController extends Controller
         $testimonial->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function testimonialMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'testimonial_main_title' => ['max:255'],
+            'testimonial_sub_title' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }
