@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\SectionTitle;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,10 @@ class ServiceController extends Controller
      */
     public function index()
     {
+        $keys = ['services_main_title', 'services_sub_title'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $services = Service::all();
-        return view('admin.service.index', compact('services'));
+        return view('admin.service.index', compact('title','services'));
     }
 
     /**
@@ -96,5 +99,26 @@ class ServiceController extends Controller
         Service::findOrFail($id)->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function servicesMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'services_main_title' => ['max:255'],
+            'services_sub_title' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
+
     }
 }

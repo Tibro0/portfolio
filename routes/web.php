@@ -87,9 +87,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
 
     // Professional Journey
     Route::put('/professional-journey-title-update', [ProfessionalJourneyController::class, 'professionalJourneyTitleUpdate'])->name('professional-journey-title-update');
-
     Route::put('resume/main-title/update', [ProfessionalJourneyController::class, 'resumeMainTitleUpdate'])->name('resume.main-title.update');
-
     Route::resource('professional-journey', ProfessionalJourneyController::class);
 
     // Academic Excellence
@@ -97,6 +95,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('academic-excellence', AcademicExcellenceController::class);
 
     // Service
+    Route::put('services/main-title/update', [ServiceController::class, 'servicesMainTitleUpdate'])->name('services.main-title.update');
     Route::resource('service', ServiceController::class);
 
     // Category

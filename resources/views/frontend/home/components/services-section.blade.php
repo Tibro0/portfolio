@@ -1,8 +1,8 @@
 <section id="services" class="services section">
         <!-- Section Title -->
         <div class="container section-title">
-            <h2>Services</h2>
-            <p>Crafting innovative digital solutions that drive growth and user engagement.</p>
+            <h2>{{$sectionTitle['services_main_title']}}</h2>
+            <p>{{$sectionTitle['services_sub_title']}}</p>
         </div>
         <!-- End Section Title -->
 
