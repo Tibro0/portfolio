@@ -110,6 +110,7 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('testimonial', TestimonialController::class);
 
     // Faq
+    Route::put('faq/main-title/update', [FaqController::class, 'faqMainTitleUpdate'])->name('faq.main-title.update');
     Route::resource('faq', FaqController::class);
 
     // Subscriber

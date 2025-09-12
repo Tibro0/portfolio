@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
+use App\Models\SectionTitle;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
@@ -13,8 +14,10 @@ class FaqController extends Controller
      */
     public function index()
     {
+        $keys = ['faq_main_title', 'faq_sub_title'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $faqs = Faq::all();
-        return view('admin.faq.index', compact('faqs'));
+        return view('admin.faq.index', compact('title','faqs'));
     }
 
     /**
@@ -92,5 +95,25 @@ class FaqController extends Controller
         Faq::findOrFail($id)->delete();
 
         return response(['status' => 'success', 'message' => 'Deleted Successfully!']);
+    }
+
+    public function faqMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'faq_main_title' => ['max:255'],
+            'faq_sub_title' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
+        ]);
     }
 }

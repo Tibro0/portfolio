@@ -28,7 +28,6 @@
                             </div>
                             <!-- End Frontend Card -->
                         </div>
-
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
                             <div class="skill-card">
                                 <div class="skill-header">
@@ -53,7 +52,6 @@
                             </div>
                             <!-- End Backend Card -->
                         </div>
-
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
                             <div class="skill-card">
                                 <div class="skill-header">
@@ -78,7 +76,6 @@
                             </div>
                             <!-- End Design Card -->
                         </div>
-
                         <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
                             <div class="skill-card">
                                 <div class="skill-header">
@@ -107,11 +104,10 @@
                 </div>
                 <!-- End Skills Grid -->
             </div>
-
             <div class="col-lg-4">
                 <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
-                    <h3>{{@$sectionTitle['professional_expertise_title']}}</h3>
-                    <p>{{@$sectionTitle['professional_expertise_description']}}</p>
+                    <h3>{{ @$sectionTitle['professional_expertise_title'] }}</h3>
+                    <p>{{ @$sectionTitle['professional_expertise_description'] }}</p>
 
                     <div class="summary-stats">
                         @foreach ($counters as $counter)
@@ -148,7 +144,6 @@
                             @endif
                         @endforeach
                     </div>
-
                     <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
                         <h4>Certifications</h4>
                         <div class="badge-list">

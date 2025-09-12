@@ -28,25 +28,25 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item {{ $category->slug }}">
                             <article class="portfolio-entry">
                                 <figure class="entry-image">
-                                    <img src="{{ asset($portfolio->thumb_image) }}"
-                                        class="img-fluid" alt="" loading="lazy" />
+                                    <img src="{{ asset($portfolio->thumb_image) }}" class="img-fluid" alt=""
+                                        loading="lazy" />
                                     <div class="entry-overlay">
                                         <div class="overlay-content">
-                                            <div class="entry-meta">{{$portfolio->frontend_title}}</div>
-                                            <h3 class="entry-title">{{$portfolio->frontend_description}}</h3>
+                                            <div class="entry-meta">{{ $portfolio->frontend_title }}</div>
+                                            <h3 class="entry-title">{{ $portfolio->frontend_description }}</h3>
                                             <div class="entry-links">
-                                                <a href="{{ asset($portfolio->thumb_image) }}"
-                                                    class="glightbox" data-gallery="portfolio-gallery-ui"
-                                                    data-glightbox="title: {{$portfolio->preview_title}}; description: {{$portfolio->preview_description}}">
+                                                <a href="{{ asset($portfolio->thumb_image) }}" class="glightbox"
+                                                    data-gallery="portfolio-gallery-ui"
+                                                    data-glightbox="title: {{ $portfolio->preview_title }}; description: {{ $portfolio->preview_description }}">
                                                     <i class="bi bi-arrows-angle-expand"></i>
                                                 </a>
                                                 <a target="_blank" href="{{ $portfolio->live_link }}">
                                                     <i class="bi bi-arrow-up-right"></i>
                                                 </a>
                                                 @if ($portfolio->github_link)
-                                                <a target="_blank" href="{{ $portfolio->github_link }}">
-                                                    <i class="bi bi-github"></i>
-                                                </a>
+                                                    <a target="_blank" href="{{ $portfolio->github_link }}">
+                                                        <i class="bi bi-github"></i>
+                                                    </a>
                                                 @endif
                                             </div>
                                         </div>

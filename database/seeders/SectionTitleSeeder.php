@@ -110,6 +110,18 @@ class SectionTitleSeeder extends Seeder
                 'created_at'=> now(),
                 'updated_at'=> now(),
             ],
+            [
+                'key'=> 'faq_main_title',
+                'value'=> 'Frequently Asked Questions',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
+            [
+                'key'=> 'faq_sub_title',
+                'value'=> 'Common questions, clear answers—streamlining your experience.',
+                'created_at'=> now(),
+                'updated_at'=> now(),
+            ],
         ]);
     }
 }
