@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 12, 2025 at 05:58 PM
+-- Generation Time: Sep 13, 2025 at 09:03 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.23
 
@@ -505,7 +505,9 @@ INSERT INTO `section_titles` (`id`, `key`, `value`, `created_at`, `updated_at`) 
 (15, 'testimonial_main_title', 'Testimonials', '2025-09-12 11:21:05', '2025-09-12 11:21:05'),
 (16, 'testimonial_sub_title', 'Praise for precision and impact—client testimonials highlight delivered excellence.', '2025-09-12 11:21:05', '2025-09-12 11:21:05'),
 (17, 'faq_main_title', 'Frequently Asked Questions', '2025-09-12 11:31:46', '2025-09-12 11:35:37'),
-(18, 'faq_sub_title', 'Common questions, clear answers—streamlining your experience.', '2025-09-12 11:31:46', '2025-09-12 11:35:37');
+(18, 'faq_sub_title', 'Common questions, clear answers—streamlining your experience.', '2025-09-12 11:31:46', '2025-09-12 11:35:37'),
+(19, 'contact_main_title', 'Contact', '2025-09-13 02:27:36', '2025-09-13 02:32:16'),
+(20, 'contact_sub_title', 'Results-driven innovator building high-performing teams and transformative products.', '2025-09-13 02:27:36', '2025-09-13 02:32:16');
 
 -- --------------------------------------------------------
 
@@ -554,6 +556,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('00yaOkh1hTvmKGjW816EZjuG17AJ6MZBA2VOywY0', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoialdOVENnN1RPRktMZFZTSVRMWGpoN3o1dUdyVVBIdlJYaFZQWHA4NSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwIjt9fQ==', 1757752419),
 ('0AnNASIz8HurGuv3A2RpZdV3Iu6zDAbQvxDKaTPp', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNVBrSnBWakNMYjZzclh6U0ViUFJLcjlhOVZXaVpVUFhnSWxhbFZKYiI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozODoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FkbWluL3N1YnNjcmliZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1757699887);
 
 -- --------------------------------------------------------
@@ -696,7 +699,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `avatar`, `name`, `email`, `phone_one`, `phone_two`, `address_line_one`, `address_line_two`, `short_description`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '/uploads/avatar.png', 'MD. Faysal Hossain Tibro', 'faysaltibro@gmail.com', '+8801734449023', NULL, 'House No : 101, Maowlana Vashani Road,', 'Tongi East, Banomala Road.', 'Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.', '2025-09-12 11:21:05', '$2y$12$5TMQGSJPFwwQ2QVgWj66Lu7cYcgIhjJr3sM8S5dhL7G0EjTpq4DsC', 'dl9sULjbw9', '2025-09-12 11:21:05', '2025-09-12 11:21:05');
+(1, '/uploads/avatar.png', 'MD. Faysal Hossain Tibro', 'faysaltibro@gmail.com', '+8801734449023', NULL, 'House No : 101, Maowlana Vashani Road,', 'Tongi East, Banomala Road.', 'Full-stack developer skilled in Laravel, PHP, JavaScript, and modern frameworks. Adept at building dynamic web apps, problem-solving, and clear team collaboration. Dedicated to delivering high-quality, user-focused solutions.', '2025-09-12 11:21:05', '$2y$12$5TMQGSJPFwwQ2QVgWj66Lu7cYcgIhjJr3sM8S5dhL7G0EjTpq4DsC', 'aZlAKclfaGgufXOIYk4ON1kJwWQPUMAaSCo5RmeSX4M3XCzDjKsbZQzGf0eF', '2025-09-12 11:21:05', '2025-09-12 11:21:05');
 
 --
 -- Indexes for dumped tables
@@ -986,7 +989,7 @@ ALTER TABLE `professional_journeys`
 -- AUTO_INCREMENT for table `section_titles`
 --
 ALTER TABLE `section_titles`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `services`
