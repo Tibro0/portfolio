@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Frontend All Route
-Route::controller(FrontendController::class)->group(function(){
+Route::controller(FrontendController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::post('/contact-form', 'contactForm')->name('contact-form');
     Route::get('/download-cv', 'downloadCv')->name('download.cv');
@@ -114,6 +114,8 @@ Route::middleware('auth')->prefix('admin')->as('admin.')->group(function () {
     Route::resource('faq', FaqController::class);
 
     // Subscriber
+    Route::put('contact/main-title/update', [SubscriberController::class, 'contactMainTitleUpdate'])->name('contact.main-title.update');
+
     Route::get('/subscriber-block', [SubscriberController::class, 'subscriberBlock'])->name('subscriber.block');
     Route::post('/subscriber-sent', [SubscriberController::class, 'subscriberSent'])->name('subscriber.sent');
     Route::resource('subscriber', SubscriberController::class);

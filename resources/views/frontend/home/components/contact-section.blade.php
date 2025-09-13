@@ -1,8 +1,8 @@
 <section id="contact" class="contact section light-background">
     <!-- Section Title -->
     <div class="container section-title">
-        <h2>Contact</h2>
-        <p>Results-driven innovator building high-performing teams and transformative products.</p>
+        <h2>{{ $sectionTitle['contact_main_title'] }}</h2>
+        <p>{{ $sectionTitle['contact_sub_title'] }}</p>
     </div>
     <!-- End Section Title -->
     <div class="container" data-aos="fade-up" data-aos-delay="100">

@@ -22,6 +22,8 @@
                     <div class="breadcrumb-title border-0 pe-3">All Active Subscribers (Sent 500 Emails Per Day Free)</div>
                     <div class="ms-auto">
                         <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Main Title Update</button>
+                        <button type="button" class="btn btn-outline-primary px-5" data-bs-toggle="modal"
                             data-bs-target="#exampleExtraLargeModal">Send News Letter</button>
                         <a href="{{ route('admin.subscriber.create') }}" class="btn btn-primary px-5">Create
                             New</a>
@@ -98,6 +100,47 @@
                             </div>
                             <div class="col-lg-12">
                                 <button type="submit" class="btn btn-primary px-5">Sent Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Title Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Title Update</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('admin.contact.main-title.update') }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="row g-3">
+                            <div class="col-lg-12">
+                                <label class="form-label">Contact Main Title <span class="text-danger">*</span></label>
+                                <input type="text" name="contact_main_title"
+                                    class="form-control @error('contact_main_title') is-invalid @enderror"
+                                    value="{{ old('contact_main_title') ?? @$title['contact_main_title'] }}" placeholder="Contact Main Title">
+                                @error('contact_main_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <label class="form-label">Contact Sub Title <span class="text-danger">*</span></label>
+                                <input type="text" name="contact_sub_title"
+                                    class="form-control @error('contact_sub_title') is-invalid @enderror"
+                                    value="{{ old('contact_sub_title') ?? @$title['contact_sub_title'] }}" placeholder="Contact Sub Title">
+                                @error('contact_sub_title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary px-5">Save Changes</button>
                             </div>
                         </div>
                     </form>

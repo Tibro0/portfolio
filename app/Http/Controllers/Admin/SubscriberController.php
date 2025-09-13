@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Mail\SubscriberMail;
+use App\Models\SectionTitle;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -15,8 +16,10 @@ class SubscriberController extends Controller
      */
     public function index()
     {
+        $keys = ['contact_main_title', 'contact_sub_title'];
+        $title = SectionTitle::whereIn('key', $keys)->pluck('value', 'key');
         $subscribers = Subscriber::where('status', 1)->get();
-        return view('admin.subscriber.index', compact('subscribers'));
+        return view('admin.subscriber.index', compact('title','subscribers'));
     }
 
     /**
@@ -114,6 +117,26 @@ class SubscriberController extends Controller
         return redirect()->back()->with('toast', [
             'type' => 'success',
             'message' => 'News letter Sent Successfully!'
+        ]);
+    }
+
+    public function contactMainTitleUpdate(Request $request)
+    {
+        $validatedData = $request->validate([
+            'contact_main_title' => ['max:255'],
+            'contact_sub_title' => ['max:255'],
+        ]);
+
+        foreach ($validatedData as $key => $value) {
+            SectionTitle::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
+
+        return redirect()->back()->with('toast', [
+            'type' => 'success',
+            'message' => 'Update Successfully!'
         ]);
     }
 }
