@@ -35,6 +35,7 @@
                             <tr>
                                 <th>SL</th>
                                 <th>Email</th>
+                                <th>Address</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -43,6 +44,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->email }}</td>
+                                    <td>{{ $item->address }}</td>
                                     <td>
                                         <a href="{{ route('admin.subscriber.edit', $item->id) }}" class="btn btn-primary"><i
                                                 class="lni lni-pencil-alt"></i></a>

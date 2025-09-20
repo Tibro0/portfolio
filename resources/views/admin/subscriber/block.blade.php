@@ -31,6 +31,7 @@
                             <tr>
                                 <th>SL</th>
                                 <th>Email</th>
+                                <th>Address</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,6 +40,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->email }}</td>
+                                    <td>{{ $item->address }}</td>
                                     <td>
                                         <a href="{{ route('admin.subscriber.edit', $item->id) }}" class="btn btn-primary"><i
                                                 class="lni lni-pencil-alt"></i></a>
@@ -48,7 +50,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="3">
+                                    <td colspan="4">
                                         <div class="alert alert-primary border-0 bg-primary">
                                             <div class="text-white text-center h5">No Data Found!</div>
                                         </div>

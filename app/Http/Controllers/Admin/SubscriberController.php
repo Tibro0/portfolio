@@ -36,11 +36,13 @@ class SubscriberController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => ['required', 'email', 'max:255', 'unique:subscribers,email']
+            'email' => ['required', 'email', 'max:255', 'unique:subscribers,email'],
+            'address' => ['nullable', 'max:255']
         ]);
 
         $subscriber = new Subscriber();
         $subscriber->email = $request->email;
+        $subscriber->address = $request->address;
         $subscriber->status = $request->status;
         $subscriber->save();
 
@@ -73,11 +75,13 @@ class SubscriberController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'email' => ['required', 'email', 'max:255', 'unique:subscribers,email,' . $id]
+            'email' => ['required', 'email', 'max:255', 'unique:subscribers,email,' . $id],
+            'address' => ['nullable', 'max:255']
         ]);
 
         $subscriber = Subscriber::findOrFail($id);
         $subscriber->email = $request->email;
+        $subscriber->address = $request->address;
         $subscriber->status = $request->status;
         $subscriber->save();
 

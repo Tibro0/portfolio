@@ -24,6 +24,15 @@
                                     @enderror
                                 </div>
                                 <div class="col-lg-12">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" name="address"
+                                        class="form-control @error('address') is-invalid @enderror"
+                                        value="{{ old('address') }}" placeholder="Address">
+                                    @error('address')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="col-lg-12">
                                     <label class="form-label">Status</label>
                                     <select name="status" class="form-select">
                                         <option value="">Select</option>
