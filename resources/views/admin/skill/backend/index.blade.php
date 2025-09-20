@@ -49,7 +49,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="3">
+                                    <td colspan="4">
                                         <div class="alert alert-primary border-0 bg-primary">
                                             <div class="text-white text-center h5">No Data Found!</div>
                                         </div>
@@ -107,7 +107,7 @@
             </div>
         </div>
     </div>
-    
+
 @endsection
 
 @section('js-link')
